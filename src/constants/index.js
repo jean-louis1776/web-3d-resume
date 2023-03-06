@@ -29,34 +29,13 @@ import {
   project10,
   project11,
   project12,
-  project13,
-  project14,
-  project15,
-  project16,
-  project17,
-  project18,
-  project19,
-  project20,
-  project21,
-  project22,
-  project23,
-  project24,
-  project25,
-  project26,
-  project27,
-  project28,
-  project29,
-  project30,
-  project31,
-  project32,
-  project33,
-  project34,
-  project35,
-  project36,
-  project37,
-  project38,
   me,
+  CV_Duncan,
 } from "../assets"
+
+export const CVDuncan = CV_Duncan
+
+export const myGithub = "https://github.com/jean-louis1776"
 
 export const navLinks = [
   {
@@ -196,10 +175,9 @@ const experiences = [
   },
 ]
 
-const testimonials = [
+const myWords = [
   {
-    testimonial:
-      "Here you can download my СМ by clicking on Download button. I will be glad to our cooperation.",
+    text: "Here you can download my СV by clicking on Download button. I will be glad to our cooperation.",
     name: "Ilya Aleksin",
     designation: "The owner",
     company: "ILALEX",
@@ -209,16 +187,16 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Guess My Number!",
+    name: "Yummio",
     description:
-      "This is my first game on JavaScript. In this game you have to guess a number between 1 and 20 until you run out of lives.",
+      "A small cooking React app using a third party API. There is a search in the recipe database and 4 ready-made presets.",
     tags: [
       {
-        name: "js",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "html",
+        name: "rest_api",
         color: "green-text-gradient",
       },
       {
@@ -227,14 +205,13 @@ const projects = [
       },
     ],
     image: project1,
-    source_code_link:
-      "https://github.com/jean-louis1776/PROJECT-1-guess-my-number",
-    demo_link: "https://jean-louis1776.github.io/PROJECT-1-guess-my-number/",
+    source_code_link: "https://github.com/jean-louis1776/recipe-app-react",
+    demo_link: "https://yummio.netlify.app/",
   },
   {
-    name: "Pig Game",
+    name: "Parallax Gallery",
     description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
+      "A small gallery project. Actively used CSS animation, blur, parallax and gradient effects, as well as the SwiperJS library.",
     tags: [
       {
         name: "js",
@@ -250,334 +227,13 @@ const projects = [
       },
     ],
     image: project2,
-    source_code_link: "https://github.com/jean-louis1776/PROJECT-2-pig-game",
-    demo_link: "https://jean-louis1776.github.io/PROJECT-2-pig-game/",
-  },
-  // {
-  //   name: "Calculator",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project3,
-  //   source_code_link: "https://github.com/jean-louis1776/PROJECT-3-calculator",
-  //   demo_link: "https://jean-louis1776.github.io/PROJECT-3-calculator/",
-  // },
-  // {
-  //   name: "JS-animation",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project4,
-  //   source_code_link:
-  //     "https://github.com/jean-louis1776/PROJECT-4-JS-animation",
-  //   demo_link: "https://jean-louis1776.github.io/PROJECT-4-JS-animation/",
-  // },
-  // {
-  //   name: "Responsive Login Form",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project5,
-  //   source_code_link:
-  //     "https://github.com/jean-louis1776/PROJECT-5-responsive-login-form",
-  //   demo_link:
-  //     "https://jean-louis1776.github.io/PROJECT-5-responsive-login-form/",
-  // },
-  // {
-  //   name: "CSS Stacked Cards",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project6,
-  //   source_code_link:
-  //     "https://github.com/jean-louis1776/PROJECT-6-Responsive-CSS-Stacked-Cards",
-  //   demo_link:
-  //     "https://jean-louis1776.github.io/PROJECT-6-Responsive-CSS-Stacked-Cards/",
-  // },
-  // {
-  //   name: "Web-Store",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project7,
-  //   source_code_link: "https://github.com/jean-louis1776/web-store",
-  //   demo_link: "https://jean-louis1776.github.io/web-store/",
-  // },
-  {
-    name: "Yummio",
-    description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project8,
-    source_code_link: "https://github.com/jean-louis1776/recipe-app-react",
-    demo_link: "https://yummio.netlify.app/",
-  },
-  // {
-  //   name: "Finger Scan",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project9,
-  //   source_code_link:
-  //     "https://github.com/jean-louis1776/PROJECT-7-CSS-Effect-Finger-Scan",
-  //   demo_link:
-  //     "https://jean-louis1776.github.io/PROJECT-7-CSS-Effect-Finger-Scan/",
-  // },
-  // {
-  //   name: "Circular NavBar JS",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project10,
-  //   source_code_link:
-  //     "https://github.com/jean-louis1776/PROJECT-9-Circular-NavBar-JS",
-  //   demo_link: "https://jean-louis1776.github.io/PROJECT-9-Circular-NavBar-JS/",
-  // },
-  // {
-  //   name: "CSS Effect Product Card",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project11,
-  //   source_code_link:
-  //     "https://github.com/jean-louis1776/PROJECT-8-CSS-Effect-Product-Card",
-  //   demo_link:
-  //     "https://jean-louis1776.github.io/PROJECT-8-CSS-Effect-Product-Card/",
-  // },
-  // {
-  //   name: "JavaScript Calendar",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project12,
-  //   source_code_link:
-  //     "https://github.com/jean-louis1776/PROJECT-10-Full-Year-Calendar",
-  //   demo_link:
-  //     "https://jean-louis1776.github.io/PROJECT-10-Full-Year-Calendar/",
-  // },
-  // {
-  //   name: "JavaScript Clock",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project13,
-  //   source_code_link: "https://github.com/jean-louis1776/PROJECT-11-JS-Clock",
-  //   demo_link: "https://jean-louis1776.github.io/PROJECT-11-JS-Clock/",
-  // },
-  {
-    name: "Parallax Gallery",
-    description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project14,
     source_code_link: "https://github.com/jean-louis1776/Parallax-Gallery",
     demo_link: "https://jean-louis1776.github.io/Parallax-Gallery/",
   },
   {
-    name: "GERÍCHT",
-    description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project15,
-    source_code_link:
-      "https://github.com/jean-louis1776/responsive-restaurant-website",
-    demo_link: "https://gericht-food.netlify.app/",
-  },
-  {
-    name: "GPT-3",
-    description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project16,
-    source_code_link: "https://github.com/jean-louis1776/modern-website-react",
-    demo_link: "https://gpt3-react-aleksin.netlify.app/",
-  },
-  {
     name: "Elecar",
     description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
+      "Responsive website using HTML CSS & JavaScript. Contains animations when scrolling, smooth scrolling in each section.",
     tags: [
       {
         name: "js",
@@ -592,15 +248,15 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project17,
+    image: project3,
     source_code_link:
       "https://github.com/jean-louis1776/responsive-car-website",
     demo_link: "https://jean-louis1776.github.io/responsive-car-website/",
   },
   {
-    name: "3D-Scroll",
+    name: "Beautiful World",
     description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
+      "First experience of creating a website with 3D scrolling. Third party libraries were not used. Compatible with all devices.",
     tags: [
       {
         name: "js",
@@ -615,14 +271,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project18,
+    image: project4,
     source_code_link: "https://github.com/jean-louis1776/3d-scroll-site",
     demo_link: "https://jean-louis1776.github.io/3d-scroll-site/",
   },
   {
     name: "Assassin's Mantle",
     description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
+      "A tricky way to create a 3D effect for a 2D picture. The website is designed as a gallery. Bootstrap and SwiperJS libraries were used.",
     tags: [
       {
         name: "js",
@@ -637,36 +293,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project19,
+    image: project5,
     source_code_link: "https://github.com/jean-louis1776/assassin-hoodie",
     demo_link: "https://jean-louis1776.github.io/assassin-hoodie/",
   },
   {
-    name: "Parallax Mountain",
-    description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project20,
-    source_code_link: "https://github.com/jean-louis1776/parallax-mountain",
-    demo_link: "https://parallax-mountain-ilalex.netlify.app/",
-  },
-  {
     name: "Coffee.",
     description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
+      "Landing page for a fictional coffee shop. Full responsiveness. CSS animations and JavaScript library MixItUp were used.",
     tags: [
       {
         name: "js",
@@ -681,7 +315,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project21,
+    image: project6,
     source_code_link:
       "https://github.com/jean-louis1776/responsive-coffee-website",
     demo_link: "https://jean-louis1776.github.io/responsive-coffee-website/",
@@ -689,97 +323,47 @@ const projects = [
   {
     name: "2048",
     description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
+      "Game 2048 using React. Romain Cousin - it's his design. Logic - Ivan Vergiliev. His logic is very easy to follow.",
     tags: [
       {
-        name: "js",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
+        name: "scss",
         color: "pink-text-gradient",
       },
     ],
-    image: project22,
+    image: project7,
     source_code_link: "https://github.com/jean-louis1776/2048-animated",
     demo_link: "https://2048-animated-aleksin.netlify.app/",
   },
-  // {
-  //   name: "NFT Market",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project23,
-  //   source_code_link:
-  //     "https://github.com/jean-louis1776/nft-market-react-native",
-  //   demo_link: "https://nft-native-showcase.netlify.app/",
-  // },
-  // {
-  //   name: "Weather App",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project24,
-  //   source_code_link:
-  //     "https://github.com/jean-louis1776/weather-app-react-native",
-  //   demo_link: "https://expo.dev/@jean-louis1776/weather-app",
-  // },
   {
     name: "Google Clone",
     description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
+      "Google search engine clone. API official. The frontend part of the application was written using the NextJS React framework.",
     tags: [
       {
-        name: "js",
+        name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "html",
+        name: "rest_api",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "tailwindcss",
         color: "pink-text-gradient",
       },
     ],
-    image: project25,
+    image: project8,
     source_code_link: "https://github.com/jean-louis1776/google-clone",
     demo_link: "https://google-clone-ilalex.vercel.app/",
   },
   {
     name: "Holux",
     description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
+      "Beautiful landing page for real estate services. Includes a dark and light mode. Used JS libraries - ScrollReveal and SwiperJS.",
     tags: [
       {
         name: "js",
@@ -794,237 +378,36 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project26,
+    image: project9,
     source_code_link: "https://github.com/jean-louis1776/holux-responsive",
     demo_link: "https://holux-responsive.vercel.app/",
   },
   {
-    name: "Responsive 404 Page",
+    name: "GeekTube",
     description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
+      "Graduation Fullstack project at GeekBrains University. The project was created in a team. Simple video hosting (like YouTube).",
     tags: [
       {
-        name: "js",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "html",
+        name: "express",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "sql",
         color: "pink-text-gradient",
       },
     ],
-    image: project27,
-    source_code_link: "https://github.com/jean-louis1776/responsive-404-page",
-    demo_link: "https://responsive-404-page.vercel.app/",
-  },
-  {
-    name: "Live Battery Level",
-    description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project28,
-    source_code_link:
-      "https://github.com/jean-louis1776/battery-level-indicator",
-    demo_link: "https://battery-level-indicator.vercel.app/",
-  },
-  {
-    name: "Neumorphism Style Calculator",
-    description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project29,
-    source_code_link:
-      "https://github.com/jean-louis1776/neumorphism-calculator",
-    demo_link: "https://neumorphism-calculator-ilalex.vercel.app/",
-  },
-  // {
-  //   name: "CSS Water Drop Effect",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project30,
-  //   source_code_link: "https://github.com/jean-louis1776/water-drop-effect-css",
-  //   demo_link: "https://water-drop-effect-css.vercel.app/",
-  // },
-  {
-    name: "3D Hover Animation",
-    description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project31,
-    source_code_link: "https://github.com/jean-louis1776/css-3d-text-animation",
-    demo_link: "https://css-3d-text-animation.vercel.app/",
-  },
-  // {
-  //   name: "Text Focus Hover Effect",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project32,
-  //   source_code_link: "https://github.com/jean-louis1776/css-text-hover",
-  //   demo_link: "https://css-text-hover.vercel.app/",
-  // },
-  // {
-  //   name: "Bubbles Animation",
-  //   description:
-  //     "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-  //   tags: [
-  //     {
-  //       name: "js",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "html",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: project33,
-  //   source_code_link: "https://github.com/jean-louis1776/bubbles-animation-js",
-  //   demo_link: "https://bubbles-animation-js.vercel.app/",
-  // },
-  {
-    name: "YouTube 2.0",
-    description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project34,
-    source_code_link: "https://github.com/jean-louis1776/youtube-clone-reactjs",
-    demo_link: "https://youtube-2.vercel.app/",
-  },
-  {
-    name: "Beats 3 Headphones Landing Page",
-    description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project35,
-    source_code_link:
-      "https://github.com/jean-louis1776/responsive-headphones-beats",
-    demo_link: "https://responsive-beats.vercel.app/",
-  },
-  {
-    name: "GeekTube (Graduation Project)",
-    description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project36,
+    image: project10,
     source_code_link: "https://github.com/jean-louis1776/GBTube",
     demo_link: "http://www.git-tube.ru/",
   },
   {
     name: "The Witcher",
     description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
+      "Parallax gallery. Was used a custom library for creating particles, as well as the ScrollReveal and SwiperJS libraries.",
     tags: [
       {
         name: "js",
@@ -1039,14 +422,14 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project37,
+    image: project11,
     source_code_link: "https://github.com/jean-louis1776/witcher-parallax",
     demo_link: "https://witcher-parallax.vercel.app/",
   },
   {
     name: "Fairy Forest",
     description:
-      "My second game using JavaScript. This is a multiplayer dice game. The game continues until one of the players scores 100+ points.",
+      "Parallax and neon light effect in this demo. To create this effect, the GSAP, ScrollSmoother and ScrollTrigger libraries were used.",
     tags: [
       {
         name: "js",
@@ -1057,14 +440,14 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "scss",
         color: "pink-text-gradient",
       },
     ],
-    image: project38,
+    image: project12,
     source_code_link: "https://github.com/jean-louis1776/forest-parallax",
     demo_link: "https://forest-parallax-ilalex.vercel.app/",
   },
 ]
 
-export { services, technologies, experiences, testimonials, projects }
+export { services, technologies, experiences, myWords, projects }

@@ -7,6 +7,7 @@ import Experience from "./Experience"
 import Works from "./Works"
 import CV from "./CV"
 import Contact from "./Contact"
+import Footer from "./Footer"
 
 export {
   Hero,
@@ -17,6 +18,7 @@ export {
   Works,
   CV,
   Contact,
+  Footer,
   EarthCanvas,
   BallCanvas,
   ComputersCanvas,

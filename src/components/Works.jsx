@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { styles } from "../styles"
 import { github } from "../assets"
 import { SectionWrapper } from "../hoc"
-import { projects } from "../constants"
+import { myGithub, projects } from "../constants"
 import { fadeIn, textVariant } from "../utils/motion"
 
 const ProjectCard = ({
@@ -90,10 +90,35 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap justify-center gap-7">
+      <div className="mt-20 flex flex-wrap gap-7 justify-center">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
+      </div>
+
+      <div className="w-full flex flex-col items-center justify-center">
+        <motion.p
+          variants={textVariant()}
+          className="mt-24 text-secondary text-[21px] max-w-3xl leading-[30px] text-center"
+        >
+          Did you like it? This and much more you can find in my GitHub at the
+          link below.
+        </motion.p>
+
+        <div
+          className="green-pink-gradient p-[1px] rounded-full flex justify-center items-center cursor-pointer mt-4"
+          onClick={() => window.open(myGithub, "_blank")}
+        >
+          <div className="bg-tertiary rounded-full px-3 py-2 flex justify-evenly items-center">
+            <img
+              src={github}
+              alt="source code"
+              className="w-[40px] h-[40px] object-contain"
+            />
+
+            <p className="text-[21px]">GitHub</p>
+          </div>
+        </div>
       </div>
     </>
   )

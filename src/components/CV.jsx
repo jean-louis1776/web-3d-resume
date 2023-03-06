@@ -4,17 +4,18 @@ import { motion } from "framer-motion"
 import { styles } from "../styles"
 import { SectionWrapper } from "../hoc"
 import { fadeIn, textVariant } from "../utils/motion"
-import { testimonials } from "../constants"
+import { CVDuncan, myWords } from "../constants"
+import CVDoc from "../assets/CV_Ilya_Aleksin.docx"
 
-const Card = ({ index, testimonial, name, designation, company, image }) => (
+const Card = ({ index, text, name, designation, company, image }) => (
   <motion.div
-    variants={fadeIn("", "spring", index * 0.5, 0.75)}
+    variants={fadeIn("right", "spring", index * 0.5, 0.75)}
     className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
   >
     <p className="text-white font-black text-[48px]">"</p>
 
     <div className="mt-1">
-      <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
+      <p className="text-white tracking-wider text-[18px]">{text}</p>
 
       <div className="mt-7 flex justify-between items-center gap-1">
         <div className="flex-1 flex flex-col">
@@ -38,7 +39,7 @@ const Card = ({ index, testimonial, name, designation, company, image }) => (
 
 const CV = () => {
   return (
-    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
+    <div className="bg-black-100 rounded-[20px]">
       <div
         className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
       >
@@ -47,10 +48,27 @@ const CV = () => {
           <h2 className={styles.sectionHeadText}>My CV.</h2>
         </motion.div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <Card key={testimonial.name} index={index} {...testimonial} />
+      <div
+        className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7 justify-center`}
+      >
+        {myWords.map((myWords, index) => (
+          <Card key={myWords.name} index={index} {...myWords} />
         ))}
+
+        <motion.div
+          variants={fadeIn("right", "spring", 1 * 0.5, 0.75)}
+          className="bg-black-200 p-10 rounded-3xl xs:w-[640px] w-full"
+        >
+          <div className="flex min-[850px]:flex-row flex-col justify-around items-center">
+            <img src={CVDuncan} alt="CVDuncan" className="w-[250px]" />
+
+            <a href={CVDoc} download>
+              <button className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary text-[21px]">
+                Download CV
+              </button>
+            </a>
+          </div>
+        </motion.div>
       </div>
     </div>
   )
