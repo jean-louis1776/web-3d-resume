@@ -29,6 +29,9 @@ import {
   project10,
   project11,
   project12,
+  project13,
+  project14,
+  project15,
   me,
   CV_Duncan,
 } from "../assets"
@@ -256,24 +259,20 @@ const projects = [
   {
     name: "Beautiful World",
     description:
-      "First experience of creating a website with 3D scrolling. Third party libraries were not used. Compatible with all devices.",
+      "First experience of creating a website with 3D scrolling. Third party libraries were not used. There is a custom animated cursor.",
     tags: [
       {
-        name: "js",
+        name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
+        name: "tailwindcss",
         color: "pink-text-gradient",
       },
     ],
     image: project4,
-    source_code_link: "https://github.com/jean-louis1776/3d-scroll-site",
-    demo_link: "https://jean-louis1776.github.io/3d-scroll-site/",
+    source_code_link: "https://github.com/jean-louis1776/3d-scroll-nextjs",
+    demo_link: "https://3d-scroll-nextjs.vercel.app/",
   },
   {
     name: "Assassin's Mantle",
@@ -402,7 +401,7 @@ const projects = [
     ],
     image: project10,
     source_code_link: "https://github.com/jean-louis1776/GBTube",
-    demo_link: "http://www.git-tube.ru/",
+    demo_link: "http://www.geek-tube.ru/",
   },
   {
     name: "The Witcher",
@@ -447,6 +446,64 @@ const projects = [
     image: project12,
     source_code_link: "https://github.com/jean-louis1776/forest-parallax",
     demo_link: "https://forest-parallax-ilalex.vercel.app/",
+  },
+  {
+    name: "Coffetto",
+    description:
+      "Landing page for a fictional coffee shop. Full responsiveness. CSS animations and JavaScript library ScrollReveal were used.",
+    tags: [
+      {
+        name: "js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project13,
+    source_code_link: "https://github.com/jean-louis1776/coffetto",
+    demo_link: "https://coffetto.vercel.app/",
+  },
+  {
+    name: "Age Calculator",
+    description:
+      "A calculator that can calculate your age down to the day. There is a beautiful animation of calculating the age.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project14,
+    source_code_link: "https://github.com/jean-louis1776/coffetto",
+    demo_link: "https://coffetto.vercel.app/",
+  },
+  {
+    name: "Natural Forest",
+    description:
+      "Beautiful website with 3D parallax effect. There is a beautiful rain animation, as well as a custom animated cursor.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project15,
+    source_code_link: "https://github.com/jean-louis1776/coffetto",
+    demo_link: "https://coffetto.vercel.app/",
   },
 ]
 

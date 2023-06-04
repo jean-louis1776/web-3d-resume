@@ -37,6 +37,9 @@ import project9 from "./projects/project9.jpg"
 import project10 from "./projects/project10.jpg"
 import project11 from "./projects/project11.jpg"
 import project12 from "./projects/project12.jpg"
+import project13 from "./projects/project13.jpg"
+import project14 from "./projects/project14.jpg"
+import project15 from "./projects/project15.jpg"
 
 export {
   me,
@@ -75,4 +78,7 @@ export {
   project10,
   project11,
   project12,
+  project13,
+  project14,
+  project15,
 }

@@ -77,15 +77,6 @@ const Works = () => {
           </p>
         </div>
 
-        {/* <motion.div
-        variants={fadeIn("up", "spring", 0.5, 0.75)}
-        className="mt-20 flex flex-wrap gap-7 justify-center"
-      >
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
-      </motion.div> */}
-
         <div className="mt-20 flex flex-wrap gap-7 justify-center">
           {projects.map((project) => (
             <ProjectCard key={`project-${project.name}`} {...project} />
