@@ -8,7 +8,7 @@ import { CVDuncan, myWords } from "../constants"
 import CVDoc from "../assets/CV_Ilya_Aleksin.docx"
 
 const Card = ({ index, text, name, designation, company, image }) => (
-  <div className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full">
+  <div className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full select-none">
     <p className="text-white font-black text-[48px]">"</p>
 
     <div className="mt-1">
@@ -45,7 +45,7 @@ const CV = () => {
         </div>
       </div>
       <div
-        className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7 justify-center`}>
+        className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7 justify-center select-none`}>
         {myWords.map((myWords, index) => (
           <Card key={myWords.name} index={index} {...myWords} />
         ))}

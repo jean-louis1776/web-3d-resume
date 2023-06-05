@@ -484,8 +484,8 @@ const projects = [
       },
     ],
     image: project14,
-    source_code_link: "https://github.com/jean-louis1776/coffetto",
-    demo_link: "https://coffetto.vercel.app/",
+    source_code_link: "https://github.com/jean-louis1776/age-calculator-nextjs",
+    demo_link: "https://age-calculator-nextjs.vercel.app/",
   },
   {
     name: "Natural Forest",
@@ -502,8 +502,9 @@ const projects = [
       },
     ],
     image: project15,
-    source_code_link: "https://github.com/jean-louis1776/coffetto",
-    demo_link: "https://coffetto.vercel.app/",
+    source_code_link:
+      "https://github.com/jean-louis1776/natural-forest-parallax-nextjs",
+    demo_link: "https://natural-forest-parallax.vercel.app/",
   },
 ]
 

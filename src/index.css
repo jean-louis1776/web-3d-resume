@@ -11,6 +11,7 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+  will-change: transform;
 }
 
 ::-webkit-scrollbar {
@@ -20,6 +21,10 @@
 ::selection {
   background-color: #915dfc;
   color: #fff;
+}
+
+.hero-animation {
+  animation: hero 4s ease-in-out infinite;
 }
 
 .hash-span {
@@ -209,5 +214,17 @@
       0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
+  }
+}
+
+@keyframes hero {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 45% 75% 85% 55%/65% 75% 45% 75%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }

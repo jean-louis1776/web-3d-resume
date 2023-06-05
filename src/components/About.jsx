@@ -1,6 +1,5 @@
 import React from "react"
 import Tilt from "react-tilt"
-import { motion } from "framer-motion"
 
 import { styles } from "../styles"
 import { services } from "../constants"
@@ -11,7 +10,7 @@ import { me } from "../assets"
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
-      <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+      <div className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card select-none">
         <div
           options={{ max: 45, scale: 1, speed: 450 }}
           className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
@@ -52,16 +51,6 @@ const About = () => {
           using the React Native framework. Also I love making 8-bit games in
           PICO-8 engine (Lua).
         </p>
-
-        {/* <div className="xs:w-[350px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card m-auto max-[1000px]:my-14">
-          <div className="bg-tertiary rounded-[20px] min-h-[250px] flex justify-evenly items-center flex-col overflow-hidden">
-            <img
-              src={me}
-              alt="MyPhoto"
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div> */}
 
         <Tilt className="xs:w-[350px] xs:h-[350px] w-full h-full m-auto max-[1000px]:my-14">
           <div className="xs:w-[350px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">

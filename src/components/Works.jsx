@@ -28,13 +28,13 @@ const ProjectCard = ({
         <img
           src={image}
           alt="project_image"
-          className="w-full h-full object-cover rounded-2xl"
+          className="w-full h-full object-cover rounded-2xl select-none"
         />
 
         <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
           <div
             onClick={() => window.open(source_code_link, "_blank")}
-            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
+            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer select-none">
             <img
               src={github}
               alt="source code"
@@ -51,7 +51,7 @@ const ProjectCard = ({
         <p className="mt-2 text-secondary text-[14px]">{description}</p>
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap gap-2 select-none">
         {tags.map((tag) => (
           <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
             #{tag.name}
@@ -90,7 +90,7 @@ const Works = () => {
           </p>
 
           <div
-            className="green-pink-gradient p-[1px] rounded-full flex justify-center items-center cursor-pointer mt-4"
+            className="green-pink-gradient p-[1px] rounded-full flex justify-center items-center cursor-pointer mt-4 select-none"
             onClick={() => window.open(myGithub, "_blank")}>
             <div className="bg-tertiary rounded-full px-3 py-2 flex justify-evenly items-center">
               <img
