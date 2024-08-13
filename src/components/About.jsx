@@ -1,11 +1,11 @@
 import React from "react"
 import Tilt from "react-tilt"
 
-import { styles } from "../styles"
-import { services } from "../constants"
-import { fadeIn, textVariant } from "../utils/motion"
-import { SectionWrapper } from "../hoc"
 import { me } from "../assets"
+import { services } from "../constants"
+import { SectionWrapper } from "../hoc"
+import { styles } from "../styles"
+import { fadeIn, textVariant } from "../utils/motion"
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -37,8 +37,8 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="flex items-center min-[1000px]:flex-row flex-col-reverse">
         <p className="mt-4 text-secondary text-[17px] min-[1000px]:max-w-lg w-full leading-[30px]">
-          Hey! I'm Ilya. I'm 26 years old and I'm from Volgograd, Russia. I have
-          been actively engaged in web development for almost 2 years and
+          Hey! I'm Ilya. I'm 27 years old and I'm from Volgograd, Russia. I have
+          been actively engaged in web development for over 2 years and
           constantly study new technologies and try to apply them. Studied at
           GeekBrains IT University at the faculty "Full Stack JavaScript
           development". <br />
