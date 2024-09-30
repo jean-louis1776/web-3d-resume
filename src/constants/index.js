@@ -1,23 +1,27 @@
 import {
-  react,
-  reactNative,
-  nextjs,
-  web,
-  javascript,
-  html,
   css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  git,
-  figma,
-  threejs,
-  geekbrains,
-  ilalex,
-  nextjsLogo,
+  CV_Duncan,
   expo,
+  figma,
+  geekbrains,
+  git,
+  html,
+  ilalex,
+  javascript,
+  me,
+  nextjs,
+  nextjsLogo,
+  nodejs,
   project1,
+  project10,
+  project11,
+  project12,
+  project13,
+  project14,
+  project15,
+  project16,
+  project17,
+  project18,
   project2,
   project3,
   project4,
@@ -26,14 +30,13 @@ import {
   project7,
   project8,
   project9,
-  project10,
-  project11,
-  project12,
-  project13,
-  project14,
-  project15,
-  me,
-  CV_Duncan,
+  react,
+  reactjs,
+  reactNative,
+  redux,
+  tailwind,
+  threejs,
+  web,
 } from "../assets"
 
 export const CVDuncan = CV_Duncan
@@ -160,20 +163,20 @@ const experiences = [
     company_name: "Geekbrains IT University",
     icon: geekbrains,
     iconBg: "#E6DEDD",
-    date: "January 2022 - December 2022",
+    date: "February 2022 - January 2023",
     points: [
       "Development of non-commercial web application projects using TypeScript, NestJS.",
     ],
   },
   {
     title: "Frontend JavaScript Developer",
-    company_name: "ILALEX (own brand)",
+    company_name: "ILALEX",
     icon: ilalex,
     iconBg: "#E6DEDD",
-    date: "July 2022 - Present",
+    date: "February 2023 - Present",
     points: [
       "Developed my personal website using React library and Vite framework. Below in the portfolio section, you can view demos of non-commercial pet-projects, as well as view the source code on GitHub.",
-      "Commercial development of landing pages for desktop and mobile devices, as well as the development of calculators (converters) using React.",
+      "Commercial development of services and websites for desktop and mobile devices with full responsive using React (NextJS + TS + SCSS modules + Redux).",
     ],
   },
 ]
@@ -257,22 +260,22 @@ const projects = [
     demo_link: "https://jean-louis1776.github.io/responsive-car-website/",
   },
   {
-    name: "Beautiful World",
+    name: "Brushstroke Photo",
     description:
-      "First experience of creating a website with 3D scrolling. Third party libraries were not used. There is a custom animated cursor.",
+      "An interesting experiment with CSS properties. As a result, we got a beautiful photo design.",
     tags: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
+        name: "html",
+        color: "green-text-gradient",
       },
       {
-        name: "tailwindcss",
+        name: "css",
         color: "pink-text-gradient",
       },
     ],
     image: project4,
-    source_code_link: "https://github.com/jean-louis1776/3d-scroll-nextjs",
-    demo_link: "https://3d-scroll-nextjs.vercel.app/",
+    source_code_link: "https://github.com/jean-louis1776/brushstroke-photo",
+    demo_link: "https://brushstroke-photo.vercel.app/",
   },
   {
     name: "Assassin's Mantle",
@@ -506,6 +509,62 @@ const projects = [
       "https://github.com/jean-louis1776/natural-forest-parallax-nextjs",
     demo_link: "https://natural-forest-parallax.vercel.app/",
   },
+  {
+    name: "Architecture",
+    description:
+      "A beautiful, minimalist site where you can simply drag and drop to browse a photo gallery.",
+    tags: [
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project16,
+    source_code_link:
+      "https://github.com/jean-louis1776/architecture-draggable-website",
+    demo_link: "https://architecture-draggable-website.vercel.app/",
+  },
+  {
+    name: "Creative Scroll",
+    description:
+      "A simple website, but it has some nice smooth animations attached to the page scroll.",
+    tags: [
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project17,
+    source_code_link: "https://github.com/jean-louis1776/creative-scroll",
+    demo_link: "https://creative-scroll.vercel.app/",
+  },
+  {
+    name: "Beats Landing Page",
+    description:
+      "A minimalist landing page for Beats headphones with smooth animations, done in a dark theme.",
+    tags: [
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project18,
+    source_code_link:
+      "https://github.com/jean-louis1776/responsive-headphones-beats",
+    demo_link: "https://responsive-headphones-beats.vercel.app/",
+  },
 ]
 
-export { services, technologies, experiences, myWords, projects }
+export { experiences, myWords, projects, services, technologies }
