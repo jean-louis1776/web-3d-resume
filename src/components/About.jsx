@@ -38,7 +38,7 @@ const About = () => {
         className="flex items-center min-[1000px]:flex-row flex-col-reverse">
         <p className="mt-4 text-secondary text-[17px] min-[1000px]:max-w-lg w-full leading-[30px]">
           Hey! I'm Ilya. I'm 27 years old and I'm from Volgograd, Russia. I have
-          been actively engaged in web development for over 2 years and
+          been actively engaged in web development for over 3 years and
           constantly study new technologies and try to apply them. Studied at
           GeekBrains IT University at the faculty "Full Stack JavaScript
           development". <br />
