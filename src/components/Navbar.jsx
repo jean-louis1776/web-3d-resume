@@ -4,10 +4,24 @@ import {Link} from "react-router-dom"
 import {styles} from "../styles"
 import {navLinks} from "../constants"
 import {close, logo, menu} from "../assets"
+import CV_PDF from "../assets/CV_Ilya_Aleksin.pdf"
 
 const Navbar = () => {
   const [active, setActive] = useState("")
   const [toggle, setToggle] = useState(false)
+
+  const handleLinkClick = (link) => {
+    setActive(link.title);
+
+    if (link.id === 'cv') {
+      setTimeout(() => {
+        const cvLink = document.createElement('a');
+        cvLink.href = CV_PDF;
+        cvLink.download = 'CV_Ilya_Aleksin.pdf';
+        cvLink.click();
+      }, 500);
+    }
+  };
 
   return (
     <nav
@@ -37,7 +51,7 @@ const Navbar = () => {
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}>
+              onClick={() => handleLinkClick(link)}>
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
@@ -64,7 +78,7 @@ const Navbar = () => {
                   } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     setToggle(!toggle)
-                    setActive(link.title)
+                    handleLinkClick(link)
                   }}>
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
