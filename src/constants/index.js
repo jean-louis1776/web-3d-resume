@@ -177,7 +177,7 @@ const experiences = [
     iconBg: "#47008d",
     date: "December 2024 - November 2025",
     points: [
-      "Worked at the publishing company DUCKY LTD. on the Telegram Mini Apps team. The team, consisting of two back-end developers, three front-end developers, two designers, and a product manager, developed the season 2 of Hamster Kombat."
+      "Worked at the publishing company DUCKY LTD. on the Telegram Mini Apps team. The team, consisting of two back-end developers, three front-end developers, two designers, QA and a product manager, developed the season 2 of Hamster Kombat."
     ],
   },
 ]
