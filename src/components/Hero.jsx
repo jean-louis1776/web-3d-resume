@@ -1,15 +1,15 @@
 import React from "react"
-import { Cursor, useTypewriter } from "react-simple-typewriter"
+import {Cursor, useTypewriter} from "react-simple-typewriter"
 
-import { styles } from "../styles"
+import {styles} from "../styles"
 
 const Hero = () => {
   const [text, count] = useTypewriter({
     words: [
       "I'm Web Developer",
       "I'm Musician",
-      "I'm Retrogamer",
-      "GuyWhoLovesTea.jsx",
+      "I'm Gamer",
+      "GuyWhoLovesTea.tsx",
       "<ButLovesToCodeMore />",
     ],
     loop: true,
@@ -29,8 +29,9 @@ const Hero = () => {
 
             <div className="lg:w-[32rem]">
               <h1 className={`${styles.heroHeadText} text-white`}>
-                Hi, I'm <br />
-                <span className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent font-black">
+                Hi, I'm <br/>
+                <span
+                  className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent font-black">
                   Ilya Aleksin
                 </span>
               </h1>
@@ -38,7 +39,7 @@ const Hero = () => {
               <p
                 className={`${styles.heroSubText} mt-2 text-white-100 max-w-lg`}>
                 {text}
-                <Cursor cursorColor="#915eff" />
+                <Cursor cursorColor="#915eff"/>
               </p>
             </div>
           </div>
@@ -46,7 +47,8 @@ const Hero = () => {
           <a
             href="#about"
             className="w-fit mx-auto flex items-center justify-center gap-6 bg-tertiary lg:px-7 lg:py-3 px-4 py-2 rounded-xl lg:mt-10 mt-5 cursor-pointer max-[350px]:hidden select-none">
-            <div className="group border-[3px] border-white rounded-full h-12 w-7 flex justify-center lg:scale-100 scale-75">
+            <div
+              className="group border-[3px] border-white rounded-full h-12 w-7 flex justify-center lg:scale-100 scale-75">
               <div className="bg-white h-3 w-1 rounded-full mt-[10px] animate-bounce lg:scale-100 scale-75"></div>
             </div>
 
@@ -55,8 +57,10 @@ const Hero = () => {
         </div>
 
         <div className="w-full">
-          <div className="flex items-center justify-center lg:w-96 lg:h-96 w-[12.5rem] h-[12.5rem] max-[350px]:w-[10.5rem] max-[350px]:h-[10.5rem] mx-auto bg-gradient-to-b from-blue-800 via-purple-700 to-red-700 hero-animation will-change-transform shadow-card">
-            <div className="bg-avatar bg-cover bg-no-repeat bg-[50%]  justify-self-center lg:w-[374px] lg:h-[374px] w-48 h-48 max-[350px]:w-40 max-[350px]:h-40 hero-animation will-change-transform" />
+          <div
+            className="flex items-center justify-center lg:w-96 lg:h-96 w-[12.5rem] h-[12.5rem] max-[350px]:w-[10.5rem] max-[350px]:h-[10.5rem] mx-auto bg-gradient-to-b from-blue-800 via-purple-700 to-red-700 hero-animation will-change-transform shadow-card">
+            <div
+              className="bg-avatar bg-cover bg-no-repeat bg-[50%]  justify-self-center lg:w-[374px] lg:h-[374px] w-48 h-48 max-[350px]:w-40 max-[350px]:h-40 hero-animation will-change-transform"/>
           </div>
         </div>
       </div>

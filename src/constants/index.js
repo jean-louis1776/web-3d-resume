@@ -1,17 +1,17 @@
 import {
   css,
   CV_Duncan,
-  expo,
+  ducky,
+  email,
   figma,
   geekbrains,
-  git,
   html,
   ilalex,
-  javascript,
   me,
   nextjs,
   nextjsLogo,
-  nodejs,
+  nuxt,
+  pinia,
   project1,
   project10,
   project11,
@@ -32,11 +32,13 @@ import {
   project9,
   react,
   reactjs,
-  reactNative,
   redux,
+  stylus,
   tailwind,
-  threejs,
-  web,
+  telegram,
+  typescript,
+  vue,
+  whatsapp,
 } from "../assets"
 
 export const CVDuncan = CV_Duncan
@@ -69,19 +71,11 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "React Developer",
+    title: "React (Next.js) Developer",
     icon: react,
   },
   {
-    title: "React Native Developer",
-    icon: reactNative,
-  },
-  {
-    title: "NextJS Developer",
+    title: "Vue 3 (Nuxt 3) Developer",
     icon: nextjs,
   },
 ]
@@ -96,8 +90,16 @@ const technologies = [
     icon: css,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Stylus",
+    icon: stylus,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
   },
   {
     name: "React JS",
@@ -108,28 +110,20 @@ const technologies = [
     icon: nextjsLogo,
   },
   {
-    name: "Expo React Native",
-    icon: expo,
+    name: "Vue 3",
+    icon: vue,
+  },
+  {
+    name: "Nuxt.js",
+    icon: nuxt,
   },
   {
     name: "Redux Toolkit",
     icon: redux,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
+    name: "Pinia Store",
+    icon: pinia,
   },
   {
     name: "figma",
@@ -173,10 +167,20 @@ const experiences = [
     company_name: "ILALEX",
     icon: ilalex,
     iconBg: "#E6DEDD",
-    date: "February 2023 - Present",
+    date: "February 2023 - November 2024",
     points: [
       "Developed my personal website using React library and Vite framework. Below in the portfolio section, you can view demos of non-commercial pet-projects, as well as view the source code on GitHub.",
       "Commercial development of services and websites for desktop and mobile devices with full responsive using React (NextJS + TS + SCSS modules + Redux).",
+    ],
+  },
+  {
+    title: "Frontend TypeScript Developer (Nuxt 3)",
+    company_name: "Ducky LTD.",
+    icon: ducky,
+    iconBg: "#47008d",
+    date: "December 2024 - November 2025",
+    points: [
+      "Worked at the publishing company DUCKY LTD. on the Telegram Mini Apps team. The team, consisting of two back-end developers, three front-end developers, two designers, and a product manager, developed the season 2 of Hamster Kombat."
     ],
   },
 ]
@@ -510,25 +514,6 @@ const projects = [
     demo_link: "https://natural-forest-parallax.vercel.app/",
   },
   {
-    name: "Architecture",
-    description:
-      "A beautiful, minimalist site where you can simply drag and drop to browse a photo gallery.",
-    tags: [
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project16,
-    source_code_link:
-      "https://github.com/jean-louis1776/architecture-draggable-website",
-    demo_link: "https://architecture-draggable-website.vercel.app/",
-  },
-  {
     name: "Creative Scroll",
     description:
       "A simple website, but it has some nice smooth animations attached to the page scroll.",
@@ -542,7 +527,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project17,
+    image: project16,
     source_code_link: "https://github.com/jean-louis1776/creative-scroll",
     demo_link: "https://creative-scroll.vercel.app/",
   },
@@ -560,11 +545,52 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project18,
+    image: project17,
     source_code_link:
       "https://github.com/jean-louis1776/responsive-headphones-beats",
     demo_link: "https://responsive-headphones-beats.vercel.app/",
   },
+  {
+    name: "Hamster Kombat 2",
+    description:
+      "Season 2 of Hamster Kombat — an evolution of the viral clicker game with new mechanics, visuals, and improved progression.",
+    tags: [
+      {
+        name: "nuxt3",
+        color: "green-text-gradient",
+      },
+      {
+        name: "stylus",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project18,
+    demo_link: "https://t.me/Hamster_Game_Dev_bot",
+  },
 ]
 
-export { experiences, myWords, projects, services, technologies }
+const myLinks = [
+  {
+    title: "Contact with me via ",
+    subtitle: "Email",
+    subtitle_color: "pink-text-gradient",
+    link: "mailto:aleskin095@gmail.com",
+    icon: email
+  },
+  {
+    title: "Contact with me via ",
+    subtitle: "Telegram",
+    subtitle_color: "blue-text-gradient",
+    link: "https://t.me/ilya_js_overflow",
+    icon: telegram
+  },
+  {
+    title: "Contact with me via ",
+    subtitle: "WhatsApp",
+    subtitle_color: "green-text-gradient",
+    link: "https://wa.me/79876487486",
+    icon: whatsapp
+  },
+]
+
+export {experiences, myWords, projects, services, technologies, myLinks}

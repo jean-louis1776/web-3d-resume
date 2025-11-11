@@ -1,13 +1,12 @@
 import React from "react"
-import { motion } from "framer-motion"
 
-import { styles } from "../styles"
-import { SectionWrapper } from "../hoc"
-import { fadeIn, textVariant } from "../utils/motion"
-import { CVDuncan, myWords } from "../constants"
-import CVDoc from "../assets/CV_Ilya_Aleksin.docx"
+import {styles} from "../styles"
+import {SectionWrapper} from "../hoc"
+import {textVariant} from "../utils/motion"
+import {CVDuncan, myWords} from "../constants"
+import CV_PDF from "../assets/CV_Ilya_Aleksin.pdf"
 
-const Card = ({ index, text, name, designation, company, image }) => (
+const Card = ({index, text, name, designation, company, image}) => (
   <div className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full select-none">
     <p className="text-white font-black text-[48px]">"</p>
 
@@ -18,9 +17,6 @@ const Card = ({ index, text, name, designation, company, image }) => (
         <div className="flex-1 flex flex-col">
           <p className="text-white font-medium text-[16px]">
             <span className="blue-text-gradient">@</span> {name}
-          </p>
-          <p className="mt-1 text-secondary text-[12px]">
-            {designation} of {company}
           </p>
         </div>
 
@@ -52,10 +48,11 @@ const CV = () => {
 
         <div className="bg-black-200 p-10 rounded-3xl xs:w-[640px] w-full">
           <div className="flex min-[850px]:flex-row flex-col justify-around items-center">
-            <img src={CVDuncan} alt="CVDuncan" className="w-[250px]" />
+            <img src={CVDuncan} alt="CVDuncan" className="w-[250px]"/>
 
-            <a href={CVDoc} download>
-              <button className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary text-[21px]">
+            <a href={CV_PDF} download>
+              <button
+                className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary text-[21px]">
                 Download CV
               </button>
             </a>
