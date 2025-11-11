@@ -13,7 +13,8 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
-        <p>If you are interested in collaborating with me, please contact me using the links below.</p>
+        <p className='text-secondary text-[17px] max-w-3xl leading-[30px]'>If you are interested in collaborating with
+          me, please contact me using the links below.</p>
 
         <div className='flex flex-col gap-6 mt-4'>
           {myLinks.map((contact) => (
