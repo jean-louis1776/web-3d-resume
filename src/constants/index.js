@@ -19,9 +19,6 @@ import {
   project13,
   project14,
   project15,
-  project16,
-  project17,
-  project18,
   project2,
   project3,
   project4,
@@ -197,6 +194,63 @@ const myWords = [
 
 const projects = [
   {
+    name: "Hamster Kombat 2",
+    description:
+      "Season 2 of Hamster Kombat — an evolution of the viral clicker game with new mechanics, visuals, and improved progression.",
+    tags: [
+      {
+        name: "nuxt3",
+        color: "green-text-gradient",
+      },
+      {
+        name: "stylus",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project1,
+    demo_link: "https://t.me/Hamster_Game_Dev_bot",
+  },
+  {
+    name: "2048",
+    description:
+      "Game 2048 using React. Romain Cousin - it's his design. Logic - Ivan Vergiliev. His logic is very easy to follow.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project2,
+    source_code_link: "https://github.com/jean-louis1776/2048-animated",
+    demo_link: "https://2048-animated-aleksin.netlify.app/",
+  },
+  {
+    name: "The Witcher",
+    description:
+      "Parallax gallery. Was used a custom library for creating particles, as well as the ScrollReveal and SwiperJS libraries.",
+    tags: [
+      {
+        name: "js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project3,
+    source_code_link: "https://github.com/jean-louis1776/witcher-parallax",
+    demo_link: "https://witcher-parallax.vercel.app/",
+  },
+  {
     name: "Yummio",
     description:
       "A small cooking React app using a third party API. There is a search in the recipe database and 4 ready-made presets.",
@@ -214,7 +268,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project1,
+    image: project4,
     source_code_link: "https://github.com/jean-louis1776/recipe-app-react",
     demo_link: "https://yummio.netlify.app/",
   },
@@ -236,7 +290,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project2,
+    image: project5,
     source_code_link: "https://github.com/jean-louis1776/Parallax-Gallery",
     demo_link: "https://jean-louis1776.github.io/Parallax-Gallery/",
   },
@@ -258,28 +312,10 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project3,
+    image: project6,
     source_code_link:
       "https://github.com/jean-louis1776/responsive-car-website",
     demo_link: "https://jean-louis1776.github.io/responsive-car-website/",
-  },
-  {
-    name: "Brushstroke Photo",
-    description:
-      "An interesting experiment with CSS properties. As a result, we got a beautiful photo design.",
-    tags: [
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project4,
-    source_code_link: "https://github.com/jean-louis1776/brushstroke-photo",
-    demo_link: "https://brushstroke-photo.vercel.app/",
   },
   {
     name: "Assassin's Mantle",
@@ -299,7 +335,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project5,
+    image: project7,
     source_code_link: "https://github.com/jean-louis1776/assassin-hoodie",
     demo_link: "https://jean-louis1776.github.io/assassin-hoodie/",
   },
@@ -321,28 +357,10 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project6,
+    image: project8,
     source_code_link:
       "https://github.com/jean-louis1776/responsive-coffee-website",
     demo_link: "https://jean-louis1776.github.io/responsive-coffee-website/",
-  },
-  {
-    name: "2048",
-    description:
-      "Game 2048 using React. Romain Cousin - it's his design. Logic - Ivan Vergiliev. His logic is very easy to follow.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project7,
-    source_code_link: "https://github.com/jean-louis1776/2048-animated",
-    demo_link: "https://2048-animated-aleksin.netlify.app/",
   },
   {
     name: "Google Clone",
@@ -362,7 +380,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project8,
+    image: project9,
     source_code_link: "https://github.com/jean-louis1776/google-clone",
     demo_link: "https://google-clone-ilalex.vercel.app/",
   },
@@ -384,53 +402,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project9,
+    image: project10,
     source_code_link: "https://github.com/jean-louis1776/holux-responsive",
     demo_link: "https://holux-responsive.vercel.app/",
-  },
-  {
-    name: "GeekTube",
-    description:
-      "Graduation Fullstack project at GeekBrains University. The project was created in a team. Simple video hosting (like YouTube).",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express",
-        color: "green-text-gradient",
-      },
-      {
-        name: "sql",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project10,
-    source_code_link: "https://github.com/jean-louis1776/GBTube",
-    demo_link: "http://www.geek-tube.ru/",
-  },
-  {
-    name: "The Witcher",
-    description:
-      "Parallax gallery. Was used a custom library for creating particles, as well as the ScrollReveal and SwiperJS libraries.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project11,
-    source_code_link: "https://github.com/jean-louis1776/witcher-parallax",
-    demo_link: "https://witcher-parallax.vercel.app/",
   },
   {
     name: "Fairy Forest",
@@ -450,7 +424,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project12,
+    image: project11,
     source_code_link: "https://github.com/jean-louis1776/forest-parallax",
     demo_link: "https://forest-parallax-ilalex.vercel.app/",
   },
@@ -472,7 +446,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project13,
+    image: project12,
     source_code_link: "https://github.com/jean-louis1776/coffetto",
     demo_link: "https://coffetto.vercel.app/",
   },
@@ -490,7 +464,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project14,
+    image: project13,
     source_code_link: "https://github.com/jean-louis1776/age-calculator-nextjs",
     demo_link: "https://age-calculator-nextjs.vercel.app/",
   },
@@ -508,28 +482,10 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project15,
+    image: project14,
     source_code_link:
       "https://github.com/jean-louis1776/natural-forest-parallax-nextjs",
     demo_link: "https://natural-forest-parallax.vercel.app/",
-  },
-  {
-    name: "Creative Scroll",
-    description:
-      "A simple website, but it has some nice smooth animations attached to the page scroll.",
-    tags: [
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project16,
-    source_code_link: "https://github.com/jean-louis1776/creative-scroll",
-    demo_link: "https://creative-scroll.vercel.app/",
   },
   {
     name: "Beats Landing Page",
@@ -545,27 +501,10 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project17,
+    image: project15,
     source_code_link:
       "https://github.com/jean-louis1776/responsive-headphones-beats",
     demo_link: "https://responsive-headphones-beats.vercel.app/",
-  },
-  {
-    name: "Hamster Kombat 2",
-    description:
-      "Season 2 of Hamster Kombat — an evolution of the viral clicker game with new mechanics, visuals, and improved progression.",
-    tags: [
-      {
-        name: "nuxt3",
-        color: "green-text-gradient",
-      },
-      {
-        name: "stylus",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project18,
-    demo_link: "https://t.me/Hamster_Game_Dev_bot",
   },
 ]
 

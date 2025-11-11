@@ -34,7 +34,7 @@ import whatsapp from "./whatsapp-svg.svg"
 import project1 from "./projects/project1.jpg"
 import project2 from "./projects/project2.jpg"
 import project3 from "./projects/project3.jpg"
-import project4 from "./projects/project4.jpeg"
+import project4 from "./projects/project4.jpg"
 import project5 from "./projects/project5.jpg"
 import project6 from "./projects/project6.jpg"
 import project7 from "./projects/project7.jpg"
@@ -45,10 +45,7 @@ import project11 from "./projects/project11.jpg"
 import project12 from "./projects/project12.jpg"
 import project13 from "./projects/project13.jpg"
 import project14 from "./projects/project14.jpg"
-import project15 from "./projects/project15.jpg"
-import project16 from "./projects/project16.jpeg"
-import project17 from "./projects/project17.jpeg"
-import project18 from "./projects/project18.jpg"
+import project15 from "./projects/project15.jpeg"
 
 export {
   CV_Duncan,
@@ -86,9 +83,6 @@ export {
   project13,
   project14,
   project15,
-  project16,
-  project17,
-  project18,
   react,
   reactNative,
   reactjs,

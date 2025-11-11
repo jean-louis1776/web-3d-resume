@@ -19,8 +19,8 @@ const Contact = () => {
           {myLinks.map((contact) => (
             <a href={contact.link} key={contact.link} target='_blank' rel='noreferrer'>
               <button
-                className="bg-tertiary w-full flex items-center justify-center gap-3 py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md shadow-primary text-[18px] whitespace-nowrap">
-                <img src={contact.icon} alt={contact.title} className="h-6 w-6 text-white"/>
+                className="bg-tertiary w-full flex items-center justify-center gap-2 py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md shadow-primary text-[12px] md:text-[18px] whitespace-nowrap">
+                <img src={contact.icon} alt={contact.title} className="h-4 w-4 md:h-6 md:w-6 text-white"/>
                 {contact.title}
                 <span className={contact.subtitle_color}>{contact.subtitle}</span>
               </button>

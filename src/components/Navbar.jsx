@@ -26,7 +26,7 @@ const Navbar = () => {
             className="w-[7.5rem] h-14 object-contain"
           />
           <p className="text-white text-[21px] font-bold cursor-pointer flex">
-            <span className="sm:block hidden">| JavaScript Developer</span>
+            <span className="sm:block hidden">| Frontend Developer</span>
           </p>
         </Link>
 
