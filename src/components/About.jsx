@@ -37,17 +37,19 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="flex items-center min-[1000px]:flex-row flex-col-reverse">
         <p className="mt-4 text-secondary text-[17px] min-[1000px]:max-w-lg w-full leading-[30px]">
-          Hi! My name is Ilya. I'm 28 years old and from Volgograd, Russia. I've been actively involved in web
-          development for almost five years and am constantly learning new technologies and trying to apply them. I
-          studied at GeekBrains IT University in the "Full Stack JavaScript Development" department, but I prefer
-          front-end development.<br/>
-          <br/> I can and love to work in a team. I can organize myself for
-          remote work. The experience gained is not just in the treasury of
-          skills, but is actively used in product development. I like to learn
-          from more experienced colleagues, in addition to self-study. <br/>
-          <br/> There are already over 35 non-commercial projects on my GitHub.
-          I also really fell in love with Nuxt a year ago and worked for a company where it was used for a large gaming
-          project.
+          Hi! I’m Ilya, a Frontend Developer with over 4 years of experience in web development. I specialize in
+          building high-performance Telegram Mini Apps (TMA) and complex web interfaces using the Nuxt 3 and React
+          ecosystems.
+          <br/><br/>
+          My professional background includes working on global-scale products, such as Hamster Kombat 2, where I
+          focused on frontend architecture and performance optimization under extreme loads.
+          <br/><br/>
+          I graduated from GeekBrains IT University (Full Stack JavaScript Development), but my core passion lies in
+          frontend engineering. I have successfully delivered over 35 projects (check my GitHub!), ranging from fintech
+          solutions like PassimPay to interactive gaming platforms.
+          <br/><br/>
+          I am a strong team player who thrives in remote environments and values continuous growth through
+          collaboration with senior colleagues.
         </p>
 
         <Tilt className="xs:w-[350px] xs:h-[350px] w-full h-full m-auto max-[1000px]:my-14">

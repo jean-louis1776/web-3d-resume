@@ -23,9 +23,10 @@ import pug from "./tech/pug.png"
 import stylus from "./tech/stylus.png"
 import typescript from "./tech/typescript.png"
 
-import geekbrains from "./company/geekbrains.png"
 import ilalex from "./company/ilalex.png"
-import ducky from "./company/ducky.png"
+import ducky from "./company/ducky.jpg"
+import weblab from "./company/weblab.jpg"
+import nerveGames from "./company/nerve_games.jpg"
 
 import email from "./email-svg.svg"
 import telegram from "./telegram-svg.svg"
@@ -52,11 +53,12 @@ export {
   close,
   css,
   figma,
-  geekbrains,
   github,
   html,
   ilalex,
   ducky,
+  weblab,
+  nerveGames,
   logo,
   me,
   menu,

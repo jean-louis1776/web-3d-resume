@@ -4,10 +4,10 @@ import {
   ducky,
   email,
   figma,
-  geekbrains,
   html,
   ilalex,
   me,
+  nerveGames,
   nextjs,
   nextjsLogo,
   nuxt,
@@ -35,6 +35,7 @@ import {
   telegram,
   typescript,
   vue,
+  weblab,
   whatsapp,
 } from "../assets"
 
@@ -130,54 +131,50 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Frontend JavaScript Developer (student)",
-    company_name: "Geekbrains IT University",
-    icon: geekbrains,
-    iconBg: "#E6DEDD",
-    date: "April 2021 - September 2021",
-    points: [
-      "Development of non-commercial website projects using HTML5, CSS3 (SCSS) and JavaScript (JS , React, NextJS, Expo React Native) technologies.",
-    ],
-  },
-  {
-    title: "Backend JavaScript Developer (student)",
-    company_name: "Geekbrains IT University",
-    icon: geekbrains,
-    iconBg: "#E6DEDD",
-    date: "October 2021 - January 2022",
-    points: [
-      "Development of non-commercial projects of server applications using JavaScript (NodeJS), Web project assembly tools (Webpack), databases (SQLite) and the HTTP network protocol.",
-    ],
-  },
-  {
-    title: "Full Stack JavaScript Developer (student)",
-    company_name: "Geekbrains IT University",
-    icon: geekbrains,
-    iconBg: "#E6DEDD",
-    date: "February 2022 - January 2023",
-    points: [
-      "Development of non-commercial web application projects using TypeScript, NestJS.",
-    ],
-  },
-  {
-    title: "Frontend JavaScript Developer",
-    company_name: "ILALEX",
+    title: "Frontend Developer",
+    company_name: "Freelance",
     icon: ilalex,
     iconBg: "#E6DEDD",
-    date: "February 2023 - November 2024",
+    date: "November 2021 - December 2023",
     points: [
-      "Developed my personal website using React library and Vite framework. Below in the portfolio section, you can view demos of non-commercial pet-projects, as well as view the source code on GitHub.",
-      "Commercial development of services and websites for desktop and mobile devices with full responsive using React (NextJS + TS + SCSS modules + Redux).",
+      "Participated in the frontend development of web applications using React and Svelte libraries.",
+      "Developed and maintained a personal portfolio and various non-commercial pet projects to master modern web standards.",
     ],
   },
   {
-    title: "Frontend TypeScript Developer (Nuxt 3)",
+    title: "Frontend Developer",
+    company_name: "WebLab",
+    icon: weblab,
+    iconBg: "#000C80",
+    date: "January 2024 - October 2024",
+    points: [
+      "Contributed to the frontend update of the PassimPay payment platform, focusing on secure UI components and complex financial interfaces.",
+      "Developed scalable web applications using React and TypeScript, ensuring high code maintainability and type safety.",
+      "Integrated REST APIs and managed application state to provide a seamless and responsive user experience.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "Nerve Games",
+    icon: nerveGames,
+    iconBg: "#6A6BCD",
+    date: "November 2024 - December 2024",
+    points: [
+      "Participated in the initial development phase of Hamster Kombat 2, building UI components and pages with Nuxt 3.",
+      "Transitioned to Ducky LTD. as part of the core project team following the strategic acquisition of the product and its developers."
+    ],
+  },
+  {
+    title: "Frontend Developer",
     company_name: "Ducky LTD.",
     icon: ducky,
-    iconBg: "#47008d",
-    date: "December 2024 - November 2025",
+    iconBg: "#FFFFFF",
+    date: "January 2025 - November 2025",
     points: [
-      "Worked at the publishing company DUCKY LTD. on the Telegram Mini Apps team. The team, consisting of two back-end developers, three front-end developers, two designers, QA and a product manager, developed the season 2 of Hamster Kombat."
+      "Joined the core development team of Hamster Kombat 2 at Nerve Games and continued work after the team was acquired by Ducky LTD.",
+      "Developed key game interfaces and features using Nuxt 3, TypeScript, and Pug, ensuring high performance for a massive global audience.",
+      "Contributed to the Telegram Mini App (TMA) frontend architecture, focusing on smooth mobile webview rendering and stable operation under heavy load.",
+      "Worked in a cross-functional team (Back-end, Design, QA) to deliver consistent updates and new game mechanics."
     ],
   },
 ]
