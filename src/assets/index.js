@@ -31,6 +31,7 @@ import nerveGames from "./company/nerve_games.jpg"
 import email from "./email-svg.svg"
 import telegram from "./telegram-svg.svg"
 import whatsapp from "./whatsapp-svg.svg"
+import linkedin from "./linkedin-svg.svg"
 
 import project1 from "./projects/project1.jpg"
 import project2 from "./projects/project2.jpg"
@@ -93,5 +94,6 @@ export {
   web,
   email,
   telegram,
-  whatsapp
+  whatsapp,
+  linkedin,
 }

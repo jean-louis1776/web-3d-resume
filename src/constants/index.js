@@ -6,6 +6,7 @@ import {
   figma,
   html,
   ilalex,
+  linkedin,
   me,
   nerveGames,
   nextjs,
@@ -36,7 +37,7 @@ import {
   typescript,
   vue,
   weblab,
-  whatsapp,
+  whatsapp
 } from "../assets"
 
 export const CVDuncan = CV_Duncan
@@ -506,6 +507,13 @@ const projects = [
 ]
 
 const myLinks = [
+  {
+    title: "Contact with me via ",
+    subtitle: "LinkedIn",
+    subtitle_color: "blue-text-gradient",
+    link: "https://www.linkedin.com/in/ilalex76",
+    icon: linkedin
+  },
   {
     title: "Contact with me via ",
     subtitle: "Email",
