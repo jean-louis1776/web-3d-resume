@@ -27,11 +27,13 @@ import ilalex from "./company/ilalex.png"
 import ducky from "./company/ducky.jpg"
 import weblab from "./company/weblab.jpg"
 import nerveGames from "./company/nerve_games.jpg"
+import mafiagame from "./company/mafiagame.png"
 
 import email from "./email-svg.svg"
 import telegram from "./telegram-svg.svg"
 import whatsapp from "./whatsapp-svg.svg"
 
+import project0 from "./projects/project0.jpg"
 import project1 from "./projects/project1.jpg"
 import project2 from "./projects/project2.jpg"
 import project3 from "./projects/project3.jpg"
@@ -58,6 +60,7 @@ export {
   ilalex,
   ducky,
   weblab,
+  mafiagame,
   nerveGames,
   logo,
   me,
@@ -70,6 +73,7 @@ export {
   stylus,
   typescript,
   vue,
+  project0,
   project1,
   project2,
   project3,

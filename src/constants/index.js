@@ -6,12 +6,14 @@ import {
   figma,
   html,
   ilalex,
+  mafiagame,
   me,
   nerveGames,
   nextjs,
   nextjsLogo,
   nuxt,
   pinia,
+  project0,
   project1,
   project10,
   project11,
@@ -177,6 +179,17 @@ const experiences = [
       "Worked in a cross-functional team (Back-end, Design, QA) to deliver consistent updates and new game mechanics."
     ],
   },
+  {
+    title: "Frontend Developer",
+    company_name: "mafiagamelive.com",
+    icon: mafiagame,
+    iconBg: "#FFFFFF",
+    date: "February 2026 - Present",
+    points: [
+      "Landing page development for the game mafiagamelive.com. Adding animations and parallax effects.",
+      "Front-end development for Mafia Game. The game is in active development and closed beta testing."
+    ],
+  },
 ]
 
 const myWords = [
@@ -190,6 +203,31 @@ const myWords = [
 ]
 
 const projects = [
+  {
+    name: "Mafia Game",
+    description:
+      "Multiplayer social deduction game where players take on hidden roles and compete through strategy, deception, discussion, and teamwork",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "zustand",
+        color: "green-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "go_backend",
+        color: 'blue-text-gradient'
+      }
+    ],
+    image: project0,
+    demo_link: "https://t.me/mafiagamelivebot",
+  },
   {
     name: "Hamster Kombat 2",
     description:
