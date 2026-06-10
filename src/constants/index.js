@@ -218,7 +218,7 @@ const projects = [
       }
     ],
     image: project1,
-    demo_link: "https://t.me/mafiagamelivebot",
+    demo_link: "https://mafiagamelive.com/",
   },
   {
     name: "Hamster Kombat 2",
