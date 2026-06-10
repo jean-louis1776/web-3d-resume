@@ -34,22 +34,13 @@ import telegram from "./telegram-svg.svg"
 import whatsapp from "./whatsapp-svg.svg"
 import linkedin from "./linkedin-svg.svg"
 
-import project0 from "./projects/project0.jpg"
-import project1 from "./projects/project1.jpg"
-import project2 from "./projects/project2.jpg"
-import project3 from "./projects/project3.jpg"
-import project4 from "./projects/project4.jpg"
-import project5 from "./projects/project5.jpg"
-import project6 from "./projects/project6.jpg"
-import project7 from "./projects/project7.jpg"
-import project8 from "./projects/project8.jpg"
-import project9 from "./projects/project9.jpg"
-import project10 from "./projects/project10.jpg"
-import project11 from "./projects/project11.jpg"
-import project12 from "./projects/project12.jpg"
-import project13 from "./projects/project13.jpg"
-import project14 from "./projects/project14.jpg"
-import project15 from "./projects/project15.jpeg"
+import project1 from './projects/project1.jpg'
+import project2 from './projects/project2.jpg'
+import project3 from './projects/project3.jpg'
+import project4 from './projects/project4.jpg'
+import project5 from './projects/project5.jpg'
+import project6 from './projects/project6.jpg'
+import project7 from './projects/project7.jpg'
 
 export {
   CV_Duncan,
@@ -74,7 +65,6 @@ export {
   stylus,
   typescript,
   vue,
-  project0,
   project1,
   project2,
   project3,
@@ -82,14 +72,6 @@ export {
   project5,
   project6,
   project7,
-  project8,
-  project9,
-  project10,
-  project11,
-  project12,
-  project13,
-  project14,
-  project15,
   react,
   reactNative,
   reactjs,

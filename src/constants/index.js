@@ -14,22 +14,13 @@ import {
   nextjsLogo,
   nuxt,
   pinia,
-  project0,
   project1,
-  project10,
-  project11,
-  project12,
-  project13,
-  project14,
-  project15,
   project2,
   project3,
   project4,
   project5,
   project6,
   project7,
-  project8,
-  project9,
   react,
   reactjs,
   redux,
@@ -226,7 +217,7 @@ const projects = [
         color: 'blue-text-gradient'
       }
     ],
-    image: project0,
+    image: project1,
     demo_link: "https://t.me/mafiagamelivebot",
   },
   {
@@ -243,7 +234,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project1,
+    image: project2,
     demo_link: "https://t.me/Hamster_Game_Dev_bot",
   },
   {
@@ -260,31 +251,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project2,
+    image: project3,
     source_code_link: "https://github.com/jean-louis1776/2048-animated",
     demo_link: "https://2048-animated-aleksin.netlify.app/",
-  },
-  {
-    name: "The Witcher",
-    description:
-      "Parallax gallery. Was used a custom library for creating particles, as well as the ScrollReveal and SwiperJS libraries.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project3,
-    source_code_link: "https://github.com/jean-louis1776/witcher-parallax",
-    demo_link: "https://witcher-parallax.vercel.app/",
   },
   {
     name: "Yummio",
@@ -309,96 +278,6 @@ const projects = [
     demo_link: "https://yummio.netlify.app/",
   },
   {
-    name: "Parallax Gallery",
-    description:
-      "A small gallery project. Actively used CSS animation, blur, parallax and gradient effects, as well as the SwiperJS library.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project5,
-    source_code_link: "https://github.com/jean-louis1776/Parallax-Gallery",
-    demo_link: "https://jean-louis1776.github.io/Parallax-Gallery/",
-  },
-  {
-    name: "Elecar",
-    description:
-      "Responsive website using HTML CSS & JavaScript. Contains animations when scrolling, smooth scrolling in each section.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project6,
-    source_code_link:
-      "https://github.com/jean-louis1776/responsive-car-website",
-    demo_link: "https://jean-louis1776.github.io/responsive-car-website/",
-  },
-  {
-    name: "Assassin's Mantle",
-    description:
-      "A tricky way to create a 3D effect for a 2D picture. The website is designed as a gallery. Bootstrap and SwiperJS libraries were used.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project7,
-    source_code_link: "https://github.com/jean-louis1776/assassin-hoodie",
-    demo_link: "https://jean-louis1776.github.io/assassin-hoodie/",
-  },
-  {
-    name: "Coffee.",
-    description:
-      "Landing page for a fictional coffee shop. Full responsiveness. CSS animations and JavaScript library MixItUp were used.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project8,
-    source_code_link:
-      "https://github.com/jean-louis1776/responsive-coffee-website",
-    demo_link: "https://jean-louis1776.github.io/responsive-coffee-website/",
-  },
-  {
     name: "Google Clone",
     description:
       "Google search engine clone. API official. The frontend part of the application was written using the NextJS React framework.",
@@ -416,75 +295,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project9,
+    image: project5,
     source_code_link: "https://github.com/jean-louis1776/google-clone",
     demo_link: "https://google-clone-ilalex.vercel.app/",
-  },
-  {
-    name: "Holux",
-    description:
-      "Beautiful landing page for real estate services. Includes a dark and light mode. Used JS libraries - ScrollReveal and SwiperJS.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project10,
-    source_code_link: "https://github.com/jean-louis1776/holux-responsive",
-    demo_link: "https://holux-responsive.vercel.app/",
-  },
-  {
-    name: "Fairy Forest",
-    description:
-      "Parallax and neon light effect in this demo. To create this effect, the GSAP, ScrollSmoother and ScrollTrigger libraries were used.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project11,
-    source_code_link: "https://github.com/jean-louis1776/forest-parallax",
-    demo_link: "https://forest-parallax-ilalex.vercel.app/",
-  },
-  {
-    name: "Coffetto",
-    description:
-      "Landing page for a fictional coffee shop. Full responsiveness. CSS animations and JavaScript library ScrollReveal were used.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project12,
-    source_code_link: "https://github.com/jean-louis1776/coffetto",
-    demo_link: "https://coffetto.vercel.app/",
   },
   {
     name: "Age Calculator",
@@ -500,34 +313,19 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project13,
+    image: project6,
     source_code_link: "https://github.com/jean-louis1776/age-calculator-nextjs",
     demo_link: "https://age-calculator-nextjs.vercel.app/",
   },
   {
-    name: "Natural Forest",
+    name: "The Witcher",
     description:
-      "Beautiful website with 3D parallax effect. There is a beautiful rain animation, as well as a custom animated cursor.",
+      "Parallax gallery. Was used a custom library for creating particles, as well as the ScrollReveal and SwiperJS libraries.",
     tags: [
       {
-        name: "nextjs",
+        name: "js",
         color: "blue-text-gradient",
       },
-      {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project14,
-    source_code_link:
-      "https://github.com/jean-louis1776/natural-forest-parallax-nextjs",
-    demo_link: "https://natural-forest-parallax.vercel.app/",
-  },
-  {
-    name: "Beats Landing Page",
-    description:
-      "A minimalist landing page for Beats headphones with smooth animations, done in a dark theme.",
-    tags: [
       {
         name: "html",
         color: "green-text-gradient",
@@ -537,10 +335,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project15,
-    source_code_link:
-      "https://github.com/jean-louis1776/responsive-headphones-beats",
-    demo_link: "https://responsive-headphones-beats.vercel.app/",
+    image: project7,
+    source_code_link: "https://github.com/jean-louis1776/witcher-parallax",
+    demo_link: "https://witcher-parallax.vercel.app/",
   },
 ]
 
