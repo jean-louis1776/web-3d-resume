@@ -32,6 +32,7 @@ import mafiagame from "./company/mafiagame.png"
 import email from "./email-svg.svg"
 import telegram from "./telegram-svg.svg"
 import whatsapp from "./whatsapp-svg.svg"
+import linkedin from "./linkedin-svg.svg"
 
 import project0 from "./projects/project0.jpg"
 import project1 from "./projects/project1.jpg"
@@ -97,5 +98,6 @@ export {
   web,
   email,
   telegram,
-  whatsapp
+  whatsapp,
+  linkedin,
 }
