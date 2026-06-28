@@ -1,26 +1,26 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import {Link} from "react-router-dom"
 
 import {styles} from "../styles"
 import {navLinks} from "../constants"
 import {close, logo, menu} from "../assets"
-import CV_PDF from "../assets/CV_Ilya_Aleksin.pdf"
 
 const Navbar = () => {
   const [active, setActive] = useState("")
   const [toggle, setToggle] = useState(false)
 
+  // Lock background scroll while the fullscreen mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = toggle ? "hidden" : ""
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [toggle])
+
+  // The CV section lets the visitor choose EN / RU, so the nav link just
+  // scrolls there (handled by the anchor href) instead of auto-downloading.
   const handleLinkClick = (link) => {
     setActive(link.title);
-
-    if (link.id === 'cv') {
-      setTimeout(() => {
-        const cvLink = document.createElement('a');
-        cvLink.href = CV_PDF;
-        cvLink.download = 'CV_Ilya_Aleksin.pdf';
-        cvLink.click();
-      }, 500);
-    }
   };
 
   return (
@@ -29,9 +29,10 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 relative z-50"
           onClick={() => {
             setActive("")
+            setToggle(false)
             window.scrollTo(0, 0)
           }}>
           <img
@@ -61,26 +62,38 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt={toggle ? "close menu" : "menu"}
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            className="w-[28px] h-[28px] object-contain cursor-pointer relative z-50"
             onClick={() => setToggle(!toggle)}
           />
 
+          {/* Fullscreen mobile menu overlay */}
           <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
-            <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {navLinks.map((link) => (
+            className={`fixed inset-0 z-40 bg-primary/95 backdrop-blur-lg flex flex-col items-center justify-center transition-all duration-300 ${
+              toggle
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }`}>
+            <ul className="list-none flex flex-col items-center gap-3 w-full px-10">
+              {navLinks.map((link, index) => (
                 <li
                   key={link.id}
+                  style={{
+                    transitionDelay: toggle ? `${index * 60 + 80}ms` : "0ms",
+                  }}
                   className={`${
                     active === link.title ? "text-white" : "text-secondary"
-                  } font-poppins font-medium cursor-pointer text-[16px]`}
+                  } w-full text-center cursor-pointer transition-all duration-300 ${
+                    toggle ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                  }`}
                   onClick={() => {
-                    setToggle(!toggle)
+                    setToggle(false)
                     handleLinkClick(link)
                   }}>
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  <a
+                    href={`#${link.id}`}
+                    className="block w-full py-3 text-[30px] font-bold hover:text-white transition-colors duration-200">
+                    {link.title}
+                  </a>
                 </li>
               ))}
             </ul>

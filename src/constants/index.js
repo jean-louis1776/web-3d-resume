@@ -14,6 +14,7 @@ import {
   nextjsLogo,
   nuxt,
   pinia,
+  pug,
   project1,
   project2,
   project3,
@@ -29,6 +30,7 @@ import {
   telegram,
   typescript,
   vue,
+  web,
   weblab,
   whatsapp
 } from "../assets"
@@ -68,7 +70,15 @@ const services = [
   },
   {
     title: "Vue 3 (Nuxt 3) Developer",
-    icon: nextjs,
+    icon: vue,
+  },
+  {
+    title: "Telegram Mini Apps",
+    icon: telegram,
+  },
+  {
+    title: "Real-time / WebSocket Apps",
+    icon: web,
   },
 ]
 
@@ -88,6 +98,10 @@ const technologies = [
   {
     name: "Stylus",
     icon: stylus,
+  },
+  {
+    name: "Pug",
+    icon: pug,
   },
   {
     name: "TypeScript",
@@ -166,27 +180,30 @@ const experiences = [
     date: "January 2025 - November 2025",
     points: [
       "Joined the core development team of Hamster Kombat 2 at Nerve Games and continued work after the team was acquired by Ducky LTD.",
-      "Developed key game interfaces and features using Nuxt 3, TypeScript, and Pug, ensuring high performance for a massive global audience.",
+      "Developed key game interfaces and features using Nuxt 3, TypeScript, and Pug, ensuring high performance for an audience of 500K+.",
       "Contributed to the Telegram Mini App (TMA) frontend architecture, focusing on smooth mobile webview rendering and stable operation under heavy load.",
       "Worked in a cross-functional team (Back-end, Design, QA) to deliver consistent updates and new game mechanics."
     ],
   },
   {
-    title: "Frontend Developer",
+    title: "Frontend Developer (Part-time)",
     company_name: "mafiagamelive.com",
     icon: mafiagame,
     iconBg: "#FFFFFF",
     date: "February 2026 - Present",
     points: [
-      "Landing page development for the game mafiagamelive.com. Adding animations and parallax effects.",
-      "Front-end development for Mafia Game. The game is in active development and closed beta testing."
+      "Sole frontend developer on a real-time multiplayer social-deduction game (Mafia) — took the client from prototype to MVP and closed beta.",
+      "Designed the client architecture on React 19, TypeScript, Vite and Zustand (~70 components, modular SCSS).",
+      "Built a resilient WebSocket layer with ticket auth, auto-reconnect and real-time synchronization of lobby and in-game state across players.",
+      "Implemented a complex game state machine (day / voting / night / finale) with role-based action flows, end-to-end type-safe API integration (Orval over a Go backend), and i18n in 5 languages.",
+      "Delivered the marketing landing page with animations and parallax effects."
     ],
   },
 ]
 
 const myWords = [
   {
-    text: "Here you can download my СV by clicking on Download button. I will be glad to our cooperation.",
+    text: "Here you can download my CV in English or Russian. I'll be glad to cooperate — feel free to reach out.",
     name: "Ilya Aleksin",
     designation: "The owner",
     company: "ILALEX",
@@ -207,6 +224,10 @@ const projects = [
       {
         name: "zustand",
         color: "green-text-gradient",
+      },
+      {
+        name: "websocket",
+        color: "orange-text-gradient",
       },
       {
         name: "scss",
@@ -353,7 +374,7 @@ const myLinks = [
     title: "Contact with me via ",
     subtitle: "Email",
     subtitle_color: "pink-text-gradient",
-    link: "mailto:aleskin095@gmail.com",
+    link: "mailto:aleksin095@gmail.com",
     icon: email
   },
   {

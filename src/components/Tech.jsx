@@ -7,35 +7,35 @@ import { SectionWrapper } from "../hoc"
 import { technologies } from "../constants"
 import { styles } from "../styles"
 
-const TechCard = ({ index, icon }) => {
+const TechCard = ({ index, name, icon }) => {
   return (
-    <Tilt className="w-28 h-28">
-      <div
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-full shadow-card select-none">
+    <motion.div variants={fadeIn("up", "spring", index * 0.1, 0.6)}>
+      <Tilt className="w-28 h-28" options={{ max: 25, scale: 1.1, speed: 450 }}>
         <div
-          options={{ max: 45, scale: 1, speed: 450 }}
-          className="bg-tertiary rounded-full py-5 flex justify-evenly items-center flex-col">
-          <img src={icon} className="w-16 h-16 object-contain" />
+          className="w-full h-full green-pink-gradient p-[1px] rounded-full shadow-card select-none transition-transform duration-300 hover:-translate-y-1">
+          <div
+            className="bg-tertiary rounded-full w-full h-full flex justify-evenly items-center flex-col">
+            <img src={icon} alt={name} className="w-16 h-16 object-contain" />
+          </div>
         </div>
-      </div>
-    </Tilt>
+      </Tilt>
+    </motion.div>
   )
 }
 
 const Tech = () => {
   return (
     <>
-      <div variants={textVariant()}>
+      <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>My tools</p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Technologies.
         </h2>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-row flex-wrap justify-center gap-10 mt-20">
-        {technologies.map((technology) => (
-          <TechCard icon={technology.icon} key={technology.name} />
+      <div className="flex flex-row flex-wrap justify-center gap-6 xs:gap-10 mt-12 xs:mt-20">
+        {technologies.map((technology, index) => (
+          <TechCard index={index} name={technology.name} icon={technology.icon} key={technology.name} />
         ))}
       </div>
     </>

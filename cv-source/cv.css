@@ -1,0 +1,81 @@
+/* Shared resume stylesheet — print-tuned (A4) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --ink: #1c2230;
+  --muted: #5b6473;
+  --line: #e3e6ec;
+  --accent: #5b4bd6;
+  --accent-soft: #f1efff;
+  --chip: #f4f5f8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+@page { size: A4; margin: 13mm 14mm; }
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: var(--ink);
+  font-size: 10.2pt;
+  line-height: 1.42;
+  background: #fff;
+}
+
+a { color: var(--accent); text-decoration: none; }
+
+/* ---- Header ---- */
+.header { border-bottom: 2.5px solid var(--accent); padding-bottom: 11px; margin-bottom: 14px; }
+.name { font-size: 25pt; font-weight: 800; letter-spacing: -0.4px; line-height: 1.05; }
+.title { font-size: 11.5pt; font-weight: 600; color: var(--accent); margin-top: 3px; letter-spacing: 0.2px; }
+.contacts { margin-top: 9px; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 9pt; color: var(--muted); }
+.contacts span { white-space: nowrap; }
+.contacts b { color: var(--ink); font-weight: 600; }
+
+/* ---- Sections ---- */
+.section { margin-top: 13px; page-break-inside: avoid; }
+.section > h2 {
+  font-size: 9.2pt; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+  color: var(--accent); padding-bottom: 4px; margin-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---- Summary ---- */
+.summary { color: #313a4a; font-size: 10pt; line-height: 1.5; }
+
+/* ---- Highlights callout ---- */
+.highlights { background: var(--accent-soft); border-radius: 8px; padding: 11px 14px; }
+.highlights ul { list-style: none; display: grid; grid-template-columns: 1fr; gap: 5px; }
+.highlights li { position: relative; padding-left: 16px; font-size: 9.7pt; line-height: 1.4; }
+.highlights li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+.highlights b { font-weight: 700; }
+
+/* ---- Skills ---- */
+.skills { display: grid; grid-template-columns: 128px 1fr; gap: 5px 12px; font-size: 9.7pt; }
+.skills dt { font-weight: 600; color: var(--muted); }
+.skills dd { color: var(--ink); }
+
+/* ---- Experience ---- */
+.job { margin-bottom: 11px; page-break-inside: avoid; }
+.job:last-child { margin-bottom: 0; }
+.job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.job-co { font-size: 10.6pt; font-weight: 700; }
+.job-co .role { font-weight: 500; color: var(--accent); }
+.job-meta { font-size: 8.7pt; color: var(--muted); white-space: nowrap; font-weight: 500; }
+.job-sub { font-size: 8.7pt; color: var(--muted); margin: 1px 0 5px; }
+.job ul { list-style: none; }
+.job li { position: relative; padding-left: 14px; margin-bottom: 3px; font-size: 9.6pt; line-height: 1.4; }
+.job li::before { content: ''; position: absolute; left: 2px; top: 7px; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+.stack { font-size: 8.8pt; color: var(--muted); margin-top: 3px; }
+.stack b { color: #3a4252; font-weight: 600; }
+
+/* ---- Two column for education/extra ---- */
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.edu-item { margin-bottom: 6px; }
+.edu-item .d { font-weight: 700; font-size: 9.7pt; }
+.edu-item .s { font-size: 9pt; color: var(--muted); }
+.extra li { list-style: none; position: relative; padding-left: 14px; margin-bottom: 3px; font-size: 9.5pt; }
+.extra li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); }
+.extra b { font-weight: 600; }

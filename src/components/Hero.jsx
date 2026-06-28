@@ -6,9 +6,11 @@ import {styles} from "../styles"
 const Hero = () => {
   const [text, count] = useTypewriter({
     words: [
-      "I'm Web Developer",
-      "I'm Musician",
-      "I'm Gamer",
+      "I'm a Frontend Developer",
+      "I build Telegram Mini Apps",
+      "I love real-time apps",
+      "I'm a Musician",
+      "I'm a Gamer",
       "GuyWhoLovesTea.tsx",
       "<ButLovesToCodeMore />",
     ],

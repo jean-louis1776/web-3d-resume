@@ -1,15 +1,19 @@
 import React from "react"
+import {motion} from "framer-motion"
 
 import {styles} from "../styles"
 import {EarthCanvas} from "./canvas"
 import {SectionWrapper} from "../hoc"
+import {slideIn} from "../utils/motion"
 import {myLinks} from "../constants/index.js";
 
 const Contact = () => {
   return (
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
-      <div className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
+      <motion.div
+        variants={slideIn("left", "tween", 0.2, 1)}
+        className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
@@ -20,7 +24,7 @@ const Contact = () => {
           {myLinks.map((contact) => (
             <a href={contact.link} key={contact.link} target='_blank' rel='noreferrer'>
               <button
-                className="bg-tertiary w-full flex items-center justify-center gap-2 py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md shadow-primary text-[12px] md:text-[18px] whitespace-nowrap">
+                className="group bg-tertiary w-full flex items-center justify-center gap-2 py-3 px-8 rounded-xl outline-none text-white font-bold shadow-md shadow-primary text-[12px] md:text-[18px] whitespace-nowrap border border-transparent hover:border-[#915eff] hover:-translate-y-0.5 transition-all duration-300">
                 <img src={contact.icon} alt={contact.title} className="h-4 w-4 md:h-6 md:w-6 text-white"/>
                 {contact.title}
                 <span className={contact.subtitle_color}>{contact.subtitle}</span>
@@ -28,11 +32,13 @@ const Contact = () => {
             </a>
           ))}
         </div>
-      </div>
+      </motion.div>
 
-      <div className="xl:flex-1 xl:h-[450px] md:h-[550px] h-[350px]">
+      <motion.div
+        variants={slideIn("right", "tween", 0.2, 1)}
+        className="xl:flex-1 xl:h-[450px] md:h-[550px] h-[350px]">
         <EarthCanvas/>
-      </div>
+      </motion.div>
     </div>
   )
 }
