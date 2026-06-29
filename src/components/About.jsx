@@ -44,14 +44,15 @@ const About = () => {
           primarily with React 19 and the Vue 3 / Nuxt 3 stack.
           <br/><br/>
           I’ve shipped frontend for products with audiences of 500K+, such as Hamster Kombat 2, where I focused
-          on architecture and performance under heavy load. More recently, as the sole frontend developer on a
+          on architecture and performance under heavy load. More recently, as the key frontend developer on a
           real-time multiplayer game (Mafia), I took the client from prototype to MVP and closed beta — designing a
-          resilient WebSocket layer, a complex game state machine, and an end-to-end type-safe API integration.
+          resilient WebSocket layer, a complex game state machine, and an end-to-end type-safe API integration, in
+          close collaboration with the backend, design and QA team.
           <br/><br/>
           My core strengths are real-time state synchronization, type-safe API integration, and UX optimization for
-          mobile webviews and Telegram Mini Apps. I graduated from GeekBrains (Fullstack JavaScript) and have
-          delivered 35+ projects (check my GitHub!), from fintech interfaces like PassimPay to interactive gaming
-          platforms.
+          mobile webviews and Telegram Mini Apps. Over the years I’ve delivered projects ranging from fintech
+          interfaces like PassimPay to interactive gaming platforms — focused on depth and production quality rather
+          than count.
           <br/><br/>
           I’m a strong team player, comfortable in remote teams — available for remote work and open to relocation
           (Georgia).

@@ -9,7 +9,6 @@ const Hero = () => {
       "I'm a Frontend Developer",
       "I build Telegram Mini Apps",
       "I love real-time apps",
-      "I'm a Musician",
       "I'm a Gamer",
       "GuyWhoLovesTea.tsx",
       "<ButLovesToCodeMore />",

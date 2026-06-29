@@ -19,9 +19,6 @@ import {
   project2,
   project3,
   project4,
-  project5,
-  project6,
-  project7,
   react,
   reactjs,
   redux,
@@ -192,11 +189,11 @@ const experiences = [
     iconBg: "#FFFFFF",
     date: "February 2026 - Present",
     points: [
-      "Sole frontend developer on a real-time multiplayer social-deduction game (Mafia) — took the client from prototype to MVP and closed beta.",
+      "Key frontend developer on a real-time multiplayer social-deduction game (Mafia) — took the client from prototype to MVP and closed beta.",
       "Designed the client architecture on React 19, TypeScript, Vite and Zustand (~70 components, modular SCSS).",
       "Built a resilient WebSocket layer with ticket auth, auto-reconnect and real-time synchronization of lobby and in-game state across players.",
       "Implemented a complex game state machine (day / voting / night / finale) with role-based action flows, end-to-end type-safe API integration (Orval over a Go backend), and i18n in 5 languages.",
-      "Delivered the marketing landing page with animations and parallax effects."
+      "Worked closely with the backend, design and product team to ship features and the marketing landing page with animations and parallax effects."
     ],
   },
 ]
@@ -215,14 +212,14 @@ const projects = [
   {
     name: "Mafia Game",
     description:
-      "Multiplayer social deduction game where players take on hidden roles and compete through strategy, deception, discussion, and teamwork",
+      "Real-time multiplayer social-deduction game. I architected the full React 19 client (~70 components): a resilient WebSocket layer with ticket auth and auto-reconnect, a complete game state machine (day / voting / night / finale) with role-based flows, and type-safe API integration generated from a Go backend via Orval — localized into 5 languages.",
     tags: [
       {
-        name: "react",
+        name: "react19",
         color: "blue-text-gradient",
       },
       {
-        name: "zustand",
+        name: "typescript",
         color: "green-text-gradient",
       },
       {
@@ -230,7 +227,7 @@ const projects = [
         color: "orange-text-gradient",
       },
       {
-        name: "scss",
+        name: "zustand",
         color: "pink-text-gradient",
       },
       {
@@ -244,14 +241,22 @@ const projects = [
   {
     name: "Hamster Kombat 2",
     description:
-      "Season 2 of Hamster Kombat — an evolution of the viral clicker game with new mechanics, visuals, and improved progression.",
+      "Season 2 of the viral Telegram clicker (500K+ audience). As part of the core team I built key game screens and mechanics on Nuxt 3 + Pug + Stylus, focused on stable, high-performance rendering inside mobile webviews under heavy load.",
     tags: [
       {
         name: "nuxt3",
         color: "green-text-gradient",
       },
       {
-        name: "stylus",
+        name: "typescript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "pug",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "telegram",
         color: "pink-text-gradient",
       },
     ],
@@ -261,7 +266,7 @@ const projects = [
   {
     name: "2048",
     description:
-      "Game 2048 using React. Romain Cousin - it's his design. Logic - Ivan Vergiliev. His logic is very easy to follow.",
+      "Animated take on the classic 2048 in React, with smooth tile transitions and clean, easy-to-follow game logic. Design by Romain Cousin, core algorithm inspired by Ivan Vergiliev.",
     tags: [
       {
         name: "react",
@@ -279,7 +284,7 @@ const projects = [
   {
     name: "Yummio",
     description:
-      "A small cooking React app using a third party API. There is a search in the recipe database and 4 ready-made presets.",
+      "A compact recipe app in React backed by a third-party food API — full-text search across the recipe database plus four ready-made presets for quick discovery.",
     tags: [
       {
         name: "react",
@@ -297,68 +302,6 @@ const projects = [
     image: project4,
     source_code_link: "https://github.com/jean-louis1776/recipe-app-react",
     demo_link: "https://yummio.netlify.app/",
-  },
-  {
-    name: "Google Clone",
-    description:
-      "Google search engine clone. API official. The frontend part of the application was written using the NextJS React framework.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "rest_api",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project5,
-    source_code_link: "https://github.com/jean-louis1776/google-clone",
-    demo_link: "https://google-clone-ilalex.vercel.app/",
-  },
-  {
-    name: "Age Calculator",
-    description:
-      "A calculator that can calculate your age down to the day. There is a beautiful animation of calculating the age.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project6,
-    source_code_link: "https://github.com/jean-louis1776/age-calculator-nextjs",
-    demo_link: "https://age-calculator-nextjs.vercel.app/",
-  },
-  {
-    name: "The Witcher",
-    description:
-      "Parallax gallery. Was used a custom library for creating particles, as well as the ScrollReveal and SwiperJS libraries.",
-    tags: [
-      {
-        name: "js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "html",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project7,
-    source_code_link: "https://github.com/jean-louis1776/witcher-parallax",
-    demo_link: "https://witcher-parallax.vercel.app/",
   },
 ]
 
