@@ -1,5 +1,5 @@
 import React from "react"
-import Tilt from "react-tilt"
+import Tilt from "./Tilt"
 import {motion} from "framer-motion"
 
 import {github} from "../assets"
@@ -26,35 +26,40 @@ const ProjectCard = ({
         speed: 450,
       }}
       className="sm:w-[360px] w-full h-full">
-      <div className="bg-tertiary p-5 rounded-2xl w-full h-full flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-card">
+      <div data-cursor className="bg-tertiary p-5 rounded-2xl w-full h-full flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-card">
       <div className="relative w-full h-[230px]">
-        <img
-          src={image}
-          alt="project_image"
-          className="w-full h-full object-cover rounded-2xl select-none"
-        />
+        <a href={demo_link} target="_blank" rel="noopener noreferrer" tabIndex={-1}>
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover rounded-2xl select-none"
+          />
+        </a>
 
         {source_code_link && (
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer select-none">
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-          </div>
+          <a
+            href={source_code_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${name} source code on GitHub`}
+            className="absolute top-3 right-3 black-gradient w-10 h-10 rounded-full flex justify-center items-center select-none">
+            <img
+              src={github}
+              alt=""
+              className="w-1/2 h-1/2 object-contain"
+            />
+          </a>
         )}
       </div>
 
-      <div
-        className="mt-5 cursor-pointer"
-        onClick={() => window.open(demo_link, "_blank")}>
+      <a
+        href={demo_link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-5 block">
         <h3 className="text-white font-bold text-[24px]">{name}</h3>
         <p className="mt-2 text-secondary text-[14px]">{description}</p>
-      </div>
+      </a>
 
       <div className="mt-auto pt-4 flex flex-wrap gap-2 select-none">
         {tags.map((tag) => (
@@ -101,9 +106,11 @@ const Works = () => {
             GitHub at the link below.
           </p>
 
-          <div
-            className="green-pink-gradient p-[1px] rounded-full flex justify-center items-center cursor-pointer mt-4 select-none"
-            onClick={() => window.open(myGithub, "_blank")}>
+          <a
+            href={myGithub}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="green-pink-gradient p-[1px] rounded-full flex justify-center items-center mt-4 select-none">
             <div className="bg-tertiary rounded-full px-3 py-2 flex justify-evenly items-center">
               <img
                 src={github}
@@ -113,7 +120,7 @@ const Works = () => {
 
               <p className="text-[21px]">GitHub</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </>

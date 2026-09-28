@@ -1,4 +1,14 @@
+// Phones and tablets: no custom cursor, no tilt, no entrance animations.
+// ponytail: touch laptops also count as touch (any-pointer: coarse), they lose the effects too.
+export const isTouch =
+  !matchMedia("(hover: hover) and (pointer: fine)").matches ||
+  matchMedia("(any-pointer: coarse)").matches
+
+// Static variants: elements render in their final state right away.
+const still = {hidden: {}, show: {}}
+
 export const textVariant = (delay) => {
+  if (isTouch) return still
   return {
     hidden: {
       y: -50,
@@ -17,6 +27,7 @@ export const textVariant = (delay) => {
 }
 
 export const fadeIn = (direction, type, delay, duration) => {
+  if (isTouch) return still
   return {
     hidden: {
       x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
@@ -38,6 +49,7 @@ export const fadeIn = (direction, type, delay, duration) => {
 }
 
 export const zoomIn = (delay, duration) => {
+  if (isTouch) return still
   return {
     hidden: {
       scale: 0,
@@ -57,6 +69,7 @@ export const zoomIn = (delay, duration) => {
 }
 
 export const slideIn = (direction, type, delay, duration) => {
+  if (isTouch) return still
   return {
     hidden: {
       x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,

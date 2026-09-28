@@ -127,6 +127,136 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* cursor fx */
+@property --r {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 220px;
+}
+
+.cursor-fx {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 0.4s ease, --r 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.cursor-fx.is-visible { opacity: 1; }
+.cursor-fx.is-locked { --r: 110px; }
+
+/* dots + crosses revealed only around the cursor */
+.cursor-fx__grid {
+  position: absolute;
+  inset: 0;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 19v10M19 24h10' stroke='%2300cea8' stroke-width='1.2'/%3E%3C/svg%3E"),
+    radial-gradient(circle, rgba(191, 97, 255, 0.55) 1px, transparent 1.6px) 0 0 / 12px 12px;
+  -webkit-mask-image: radial-gradient(circle var(--r) at var(--gx) var(--gy), #000 0%, rgba(0, 0, 0, 0.35) 45%, transparent 100%);
+  mask-image: radial-gradient(circle var(--r) at var(--gx) var(--gy), #000 0%, rgba(0, 0, 0, 0.35) 45%, transparent 100%);
+  opacity: 0.45;
+}
+
+/* soft glow that collapses into the pointer over interactive things */
+.cursor-fx__glow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(var(--gx), var(--gy));
+}
+.cursor-fx__glow span {
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  left: -280px;
+  top: -280px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(145, 94, 255, 0.32) 0%, rgba(0, 206, 168, 0.1) 38%, transparent 68%);
+  opacity: 0.7;
+  transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.55s ease;
+}
+.is-locked .cursor-fx__glow span {
+  transform: scale(0.22);
+  opacity: 1;
+}
+
+/* targeting reticle: tiny crosshair when free, snaps to element bounds on hover */
+.cursor-fx__frame {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--fw);
+  height: var(--fh);
+  transform: translate(var(--fx), var(--fy));
+  border-radius: 6px;
+}
+.cursor-fx__frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: repeating-linear-gradient(0deg, rgba(0, 206, 168, 0.07) 0 1px, transparent 1px 4px);
+  border: 1px solid rgba(145, 94, 255, 0.25);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.is-locked .cursor-fx__frame::before { opacity: 1; }
+
+.cursor-fx__frame i {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 0 solid #00cea8;
+  filter: drop-shadow(0 0 4px #00cea8);
+  transition: border-color 0.3s ease, filter 0.3s ease;
+}
+.cursor-fx__frame i:nth-child(1) { top: 0; left: 0; border-top-width: 2px; border-left-width: 2px; }
+.cursor-fx__frame i:nth-child(2) { top: 0; right: 0; border-top-width: 2px; border-right-width: 2px; }
+.cursor-fx__frame i:nth-child(3) { bottom: 0; left: 0; border-bottom-width: 2px; border-left-width: 2px; }
+.cursor-fx__frame i:nth-child(4) { bottom: 0; right: 0; border-bottom-width: 2px; border-right-width: 2px; }
+.is-locked .cursor-fx__frame i {
+  border-color: #bf61ff;
+  filter: drop-shadow(0 0 6px #bf61ff);
+  animation: cursor-fx-pulse 1.4s ease-in-out infinite;
+}
+
+/* the actual pointer: sits exactly under the mouse, no lag */
+.cursor-fx__dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 8px #00cea8, 0 0 2px #fff;
+  transform: translate(var(--x), var(--y));
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+.is-locked .cursor-fx__dot {
+  background: #bf61ff;
+  box-shadow: 0 0 10px #bf61ff, 0 0 2px #fff;
+}
+
+/* click feedback */
+.cursor-fx__frame { transition: scale 0.15s ease; }
+.is-pressed .cursor-fx__frame { scale: 0.92; }
+.is-pressed .cursor-fx__dot { background: #00cea8; }
+
+/* hide the native cursor while the custom one is running; text fields keep the I-beam */
+html.cursor-fx-on,
+html.cursor-fx-on * { cursor: none !important; }
+html.cursor-fx-on :is(input, textarea, select, [contenteditable]) { cursor: text !important; }
+.cursor-fx.is-text .cursor-fx__frame,
+.cursor-fx.is-text .cursor-fx__dot { opacity: 0; }
+
+@keyframes cursor-fx-pulse {
+  50% { opacity: 0.45; }
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;

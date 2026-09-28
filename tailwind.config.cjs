@@ -2,6 +2,8 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
+  // hover: styles only on devices that can hover, so taps don't leave cards lifted
+  future: {hoverOnlyWhenSupported: true},
   theme: {
     extend: {
       animation: {

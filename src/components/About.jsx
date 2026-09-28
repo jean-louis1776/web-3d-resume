@@ -1,5 +1,5 @@
 import React from "react"
-import Tilt from "react-tilt"
+import Tilt from "./Tilt"
 import {motion} from "framer-motion"
 
 import {me} from "../assets"

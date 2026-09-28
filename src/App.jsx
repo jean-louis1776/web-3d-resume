@@ -2,6 +2,7 @@ import React from "react"
 import {BrowserRouter} from "react-router-dom"
 
 import {About, Contact, CV, Experience, Footer, Hero, Navbar, StarsCanvas, Tech, Works,} from "./components"
+import CursorFX from "./components/CursorFX"
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
 
           <Footer/>
         </div>
+        <CursorFX/>
       </BrowserRouter>
     </>
   )

@@ -1,5 +1,5 @@
 import React from "react"
-import Tilt from "react-tilt"
+import Tilt from "./Tilt"
 import { motion } from "framer-motion"
 
 import { fadeIn, textVariant } from "../utils/motion"
@@ -12,6 +12,7 @@ const TechCard = ({ index, name, icon }) => {
     <motion.div variants={fadeIn("up", "spring", index * 0.1, 0.6)}>
       <Tilt className="w-28 h-28" options={{ max: 25, scale: 1.1, speed: 450 }}>
         <div
+          data-cursor
           className="w-full h-full green-pink-gradient p-[1px] rounded-full shadow-card select-none transition-transform duration-300 hover:-translate-y-1">
           <div
             className="bg-tertiary rounded-full w-full h-full flex justify-evenly items-center flex-col">
