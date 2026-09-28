@@ -44,6 +44,8 @@ const CursorFX = () => {
     const onScroll = () => pick(document.elementFromPoint(x, y))
     const onDown = () => el.classList.add("is-pressed")
     const onUp = () => el.classList.remove("is-pressed")
+    // Native link/image dragging stops mousemove, freezing the reticle mid-way.
+    const onDragStart = (e) => e.preventDefault()
 
     document.documentElement.classList.add("cursor-fx-on")
 
@@ -81,6 +83,7 @@ const CursorFX = () => {
     addEventListener("scroll", onScroll, {passive: true})
     addEventListener("mousedown", onDown)
     addEventListener("mouseup", onUp)
+    addEventListener("dragstart", onDragStart)
     document.documentElement.addEventListener("mouseleave", onLeave)
     raf = requestAnimationFrame(tick)
 
@@ -90,6 +93,7 @@ const CursorFX = () => {
       removeEventListener("scroll", onScroll)
       removeEventListener("mousedown", onDown)
       removeEventListener("mouseup", onUp)
+      removeEventListener("dragstart", onDragStart)
       document.documentElement.removeEventListener("mouseleave", onLeave)
       document.documentElement.classList.remove("cursor-fx-on")
     }
