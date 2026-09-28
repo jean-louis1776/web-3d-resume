@@ -3,13 +3,12 @@ import {motion} from "framer-motion"
 
 import {logo} from "../assets"
 import {myLinks} from "../constants"
-import {isTouch} from "../utils/motion"
 
 const Footer = () => {
   return (
     <footer className="relative bg-black-200 sm:px-16 px-6 sm:py-12 py-10 mt-20 select-none">
       <motion.div
-        initial={isTouch ? false : {opacity: 0, y: 30}}
+        initial={{opacity: 0, y: 30}}
         whileInView={{opacity: 1, y: 0}}
         viewport={{once: true, amount: 0.3}}
         transition={{duration: 0.6}}

@@ -7,7 +7,7 @@ import "react-vertical-timeline-component/style.min.css"
 import {experiences} from "../constants"
 import {SectionWrapper} from "../hoc"
 import {styles} from "../styles"
-import {isTouch, textVariant} from "../utils/motion"
+import {textVariant} from "../utils/motion"
 
 const ExperienceCard = ({experience}) => {
   return (
@@ -60,7 +60,7 @@ const Experience = () => {
       </motion.div>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline animate={!isTouch}>
+        <VerticalTimeline>
           {experiences.slice().reverse().map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
