@@ -1,5 +1,6 @@
 import React from "react"
 import {motion} from "framer-motion"
+import Scramble from "./Scramble"
 import {VerticalTimeline, VerticalTimelineElement,} from "react-vertical-timeline-component"
 
 import "react-vertical-timeline-component/style.min.css"
@@ -55,7 +56,7 @@ const Experience = () => {
           What I have done so far
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
+          <Scramble text="Work Experience."/>
         </h2>
       </motion.div>
 

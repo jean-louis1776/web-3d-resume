@@ -1,5 +1,6 @@
 import React from "react"
 import {motion} from "framer-motion"
+import Scramble from "./Scramble"
 
 import {styles} from "../styles"
 import {SectionWrapper} from "../hoc"
@@ -87,7 +88,7 @@ const CV = () => {
         className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}>
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>For employers</p>
-          <h2 className={styles.sectionHeadText}>My CV.</h2>
+          <h2 className={styles.sectionHeadText}><Scramble text="My CV."/></h2>
         </motion.div>
       </div>
 

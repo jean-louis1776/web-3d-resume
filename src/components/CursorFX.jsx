@@ -31,6 +31,13 @@ const CursorFX = () => {
       x = e.clientX
       y = e.clientY
       pick(e.target)
+      // Local pointer position for the card border spotlight.
+      const card = e.target.closest?.("[data-cursor]")
+      if (card) {
+        const r = card.getBoundingClientRect()
+        card.style.setProperty("--mx", `${x - r.left}px`)
+        card.style.setProperty("--my", `${y - r.top}px`)
+      }
       el.classList.add("is-visible")
     }
     const onLeave = () => el.classList.remove("is-visible")

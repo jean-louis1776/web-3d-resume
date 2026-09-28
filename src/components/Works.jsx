@@ -1,6 +1,7 @@
 import React from "react"
 import Tilt from "./Tilt"
 import {motion} from "framer-motion"
+import Scramble from "./Scramble"
 
 import {github} from "../assets"
 import {myGithub, projects} from "../constants"
@@ -80,7 +81,7 @@ const Works = () => {
       <div>
         <motion.div variants={textVariant()}>
           <p className={`${styles.sectionSubText} `}>My work</p>
-          <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+          <h2 className={`${styles.sectionHeadText}`}><Scramble text="Projects."/></h2>
         </motion.div>
 
         <div className="w-full flex">

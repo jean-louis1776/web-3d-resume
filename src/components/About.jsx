@@ -1,6 +1,7 @@
 import React from "react"
 import Tilt from "./Tilt"
 import {motion} from "framer-motion"
+import Scramble from "./Scramble"
 
 import {me} from "../assets"
 import {services} from "../constants"
@@ -32,7 +33,7 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}><Scramble text="Overview."/></h2>
       </motion.div>
 
       <motion.div

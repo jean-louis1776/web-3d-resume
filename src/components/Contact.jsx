@@ -1,5 +1,6 @@
 import React from "react"
 import {motion} from "framer-motion"
+import Scramble from "./Scramble"
 
 import {styles} from "../styles"
 import {EarthCanvas} from "./canvas"
@@ -15,7 +16,7 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3 className={styles.sectionHeadText}><Scramble text="Contact."/></h3>
 
         <p className='text-secondary text-[17px] max-w-3xl leading-[30px]'>If you are interested in collaborating with
           me, please contact me using the links below.</p>

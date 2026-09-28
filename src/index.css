@@ -257,6 +257,44 @@ html.cursor-fx-on :is(input, textarea, select, [contenteditable]) { cursor: text
   50% { opacity: 0.45; }
 }
 
+/* card border lights up where the cursor is (only while CursorFX runs) */
+html.cursor-fx-on [data-cursor] {
+  position: relative;
+}
+html.cursor-fx-on [data-cursor]::before,
+html.cursor-fx-on [data-cursor]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+/* 1px ring: gradient painted only in the padding area */
+html.cursor-fx-on [data-cursor]::before {
+  z-index: 2;
+  padding: 1px;
+  background: radial-gradient(220px circle at var(--mx) var(--my), #00cea8, #bf61ff 45%, transparent 75%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+/* faint inner light */
+html.cursor-fx-on [data-cursor]::after {
+  z-index: 1;
+  background: radial-gradient(320px circle at var(--mx) var(--my), rgba(145, 94, 255, 0.12), transparent 60%);
+}
+html.cursor-fx-on [data-cursor]:hover::before,
+html.cursor-fx-on [data-cursor]:hover::after {
+  opacity: 1;
+}
+
+.scramble-noise {
+  color: #00cea8;
+  text-shadow: 0 0 12px rgba(0, 206, 168, 0.6);
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;

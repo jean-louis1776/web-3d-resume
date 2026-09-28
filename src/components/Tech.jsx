@@ -1,6 +1,7 @@
 import React from "react"
 import Tilt from "./Tilt"
 import { motion } from "framer-motion"
+import Scramble from "./Scramble"
 
 import { fadeIn, textVariant } from "../utils/motion"
 import { SectionWrapper } from "../hoc"
@@ -30,7 +31,7 @@ const Tech = () => {
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>My tools</p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Technologies.
+          <Scramble text="Technologies."/>
         </h2>
       </motion.div>
 
