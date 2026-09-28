@@ -11,8 +11,10 @@ const StarWrapper = (Component, idName) =>
         variants={staggerContainer(0.12, 0.1)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className={`${styles.padding} max-w-7xl mx-auto relative z-0`}>
+        // Trigger by the section's top edge, not a % of its height: tall sections
+        // (Experience) would otherwise reveal far too late.
+        viewport={{ once: true, margin: "0px 0px -15% 0px" }}
+        className={`${styles.padding} max-w-7xl mx-auto relative z-0 hud-corners`}>
         <span className="hash-span select-none" id={idName}>
           &nbsp;
         </span>

@@ -290,6 +290,67 @@ html.cursor-fx-on [data-cursor]:hover::after {
   opacity: 1;
 }
 
+/* HUD corner brackets + crosses on every section, same language as the cursor */
+.hud-corners::before {
+  --c: rgba(0, 206, 168, 0.35);
+  --p: rgba(191, 97, 255, 0.5);
+  content: "";
+  position: absolute;
+  inset: 12px;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    /* L-corners: 18px arms */
+    linear-gradient(var(--c), var(--c)) top left / 18px 1px,
+    linear-gradient(var(--c), var(--c)) top left / 1px 18px,
+    linear-gradient(var(--c), var(--c)) top right / 18px 1px,
+    linear-gradient(var(--c), var(--c)) top right / 1px 18px,
+    linear-gradient(var(--c), var(--c)) bottom left / 18px 1px,
+    linear-gradient(var(--c), var(--c)) bottom left / 1px 18px,
+    linear-gradient(var(--c), var(--c)) bottom right / 18px 1px,
+    linear-gradient(var(--c), var(--c)) bottom right / 1px 18px,
+    /* small crosses at the middle of the side edges */
+    linear-gradient(var(--p), var(--p)) left center / 9px 1px,
+    linear-gradient(var(--p), var(--p)) 4px center / 1px 9px,
+    linear-gradient(var(--p), var(--p)) right center / 9px 1px,
+    linear-gradient(var(--p), var(--p)) calc(100% - 4px) center / 1px 9px;
+  background-repeat: no-repeat;
+}
+
+/* project preview glitch: two tinted copies of the image jump in slices, once per hover */
+html.cursor-fx-on .glitch::before,
+html.cursor-fx-on .glitch::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--img) center / cover;
+  mix-blend-mode: screen;
+  opacity: 0;
+  pointer-events: none;
+}
+html.cursor-fx-on .glitch::before { filter: hue-rotate(-70deg) saturate(2.5); }
+html.cursor-fx-on .glitch::after { filter: hue-rotate(110deg) saturate(2.5); }
+html.cursor-fx-on .glitch:hover::before { animation: glitch-a 0.42s steps(1, end); }
+html.cursor-fx-on .glitch:hover::after { animation: glitch-b 0.42s steps(1, end); }
+
+@keyframes glitch-a {
+  0%   { opacity: 0.85; clip-path: inset(12% 0 70% 0); transform: translateX(-8px); }
+  20%  { clip-path: inset(58% 0 22% 0); transform: translateX(6px); }
+  40%  { clip-path: inset(32% 0 52% 0); transform: translateX(-4px); }
+  60%  { clip-path: inset(80% 0 6% 0); transform: translateX(7px); }
+  80%  { clip-path: inset(4% 0 88% 0); transform: translateX(-3px); }
+  100% { opacity: 0; }
+}
+@keyframes glitch-b {
+  0%   { opacity: 0.85; clip-path: inset(66% 0 14% 0); transform: translateX(7px); }
+  20%  { clip-path: inset(20% 0 64% 0); transform: translateX(-6px); }
+  40%  { clip-path: inset(46% 0 38% 0); transform: translateX(5px); }
+  60%  { clip-path: inset(8% 0 80% 0); transform: translateX(-7px); }
+  80%  { clip-path: inset(72% 0 18% 0); transform: translateX(3px); }
+  100% { opacity: 0; }
+}
+
 .scramble-noise {
   color: #00cea8;
   text-shadow: 0 0 12px rgba(0, 206, 168, 0.6);

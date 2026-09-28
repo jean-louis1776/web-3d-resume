@@ -29,7 +29,13 @@ const ProjectCard = ({
       className="sm:w-[360px] w-full h-full">
       <div data-cursor className="bg-tertiary p-5 rounded-2xl w-full h-full flex flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-card">
       <div className="relative w-full h-[230px]">
-        <a href={demo_link} target="_blank" rel="noopener noreferrer" tabIndex={-1}>
+        <a
+          href={demo_link}
+          target="_blank"
+          rel="noopener noreferrer"
+          tabIndex={-1}
+          className="glitch relative block w-full h-full rounded-2xl"
+          style={{"--img": `url(${image})`}}>
           <img
             src={image}
             alt={name}

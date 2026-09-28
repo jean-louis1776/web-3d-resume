@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from "react"
+import React, {useEffect, useRef, useState} from "react"
 import {Link} from "react-router-dom"
+import {motion, useScroll} from "framer-motion"
 
 import {styles} from "../styles"
 import {navLinks} from "../constants"
@@ -8,6 +9,7 @@ import {close, logo, menu} from "../assets"
 const Navbar = () => {
   const [active, setActive] = useState("")
   const [toggle, setToggle] = useState(false)
+  const {scrollYProgress} = useScroll()
 
   // Lock background scroll while the fullscreen mobile menu is open
   useEffect(() => {
@@ -17,11 +19,50 @@ const Navbar = () => {
     }
   }, [toggle])
 
+  // While a click-triggered smooth scroll runs, keep the clicked item highlighted
+  // instead of sweeping through every section on the way.
+  const locked = useRef(false)
+  const unlockTimer = useRef(0)
+  const lockUntilScrollStops = () => {
+    locked.current = true
+    clearTimeout(unlockTimer.current)
+    unlockTimer.current = setTimeout(() => (locked.current = false), 300)
+  }
+
+  // Highlight the section that crosses the middle of the viewport.
+  useEffect(() => {
+    // Every scroll event during the lock pushes the unlock back.
+    const onScroll = () => locked.current && lockUntilScrollStops()
+    addEventListener("scroll", onScroll, {passive: true})
+
+    const io = new IntersectionObserver((entries) => {
+      if (locked.current) return
+      entries.forEach((e) => {
+        const {title} = navLinks.find((l) => l.id === e.target.dataset.nav)
+        // Leaving the active section (e.g. back to hero or into Tech) clears it.
+        setActive((prev) => (e.isIntersecting ? title : prev === title ? "" : prev))
+      })
+    }, {rootMargin: "-50% 0px -50% 0px"})
+
+    navLinks.forEach((l) => {
+      const section = document.getElementById(l.id)?.parentElement
+      if (!section) return
+      section.dataset.nav = l.id
+      io.observe(section)
+    })
+    return () => {
+      io.disconnect()
+      removeEventListener("scroll", onScroll)
+      clearTimeout(unlockTimer.current)
+    }
+  }, [])
+
   // The CV section lets the visitor choose EN / RU, so the nav link just
   // scrolls there (handled by the anchor href) instead of auto-downloading.
   const handleLinkClick = (link) => {
-    setActive(link.title);
-  };
+    lockUntilScrollStops()
+    setActive(link.title)
+  }
 
   return (
     <nav
@@ -31,6 +72,7 @@ const Navbar = () => {
           to="/"
           className="flex items-center gap-2 relative z-50"
           onClick={() => {
+            lockUntilScrollStops()
             setActive("")
             setToggle(false)
             window.scrollTo(0, 0)
@@ -51,9 +93,13 @@ const Navbar = () => {
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              } relative hover:text-white text-[18px] font-medium cursor-pointer transition-colors duration-300`}
               onClick={() => handleLinkClick(link)}>
               <a href={`#${link.id}`}>{link.title}</a>
+              <span
+                className={`absolute left-0 -bottom-1 h-[2px] w-full green-pink-gradient origin-left transition-transform duration-300 ${
+                  active === link.title ? "scale-x-100" : "scale-x-0"
+                }`}/>
             </li>
           ))}
         </ul>
@@ -100,6 +146,11 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* scroll progress */}
+      <motion.div
+        className="absolute left-0 bottom-0 h-[2px] w-full green-pink-gradient origin-left"
+        style={{scaleX: scrollYProgress}}/>
     </nav>
   )
 }

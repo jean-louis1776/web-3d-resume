@@ -1,4 +1,5 @@
-import React, { Suspense } from "react"
+import React, { Suspense, useRef } from "react"
+import { useInView } from "framer-motion"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 
@@ -13,10 +14,16 @@ const Earth = () => {
 }
 
 const EarthCanvas = () => {
+  const ref = useRef()
+  // autoRotate renders every frame anyway, so run "always" on-screen and pause off-screen
+  // ("demand" would never wake up again after "never").
+  const inView = useInView(ref)
+
   return (
     <Canvas
+      ref={ref}
       shadows
-      frameloop="demand"
+      frameloop={inView ? "always" : "never"}
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
       camera={{
