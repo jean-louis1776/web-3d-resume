@@ -241,9 +241,7 @@
   box-shadow: 0 0 10px #bf61ff, 0 0 2px #fff;
 }
 
-/* click feedback */
-.cursor-fx__frame { transition: scale 0.15s ease; }
-.is-pressed .cursor-fx__frame { scale: 0.92; }
+/* click feedback (the reticle inflation itself is done in CursorFX.jsx) */
 .is-pressed .cursor-fx__dot { background: #00cea8; }
 
 /* hide the native cursor while the custom one is running; text fields keep the I-beam */

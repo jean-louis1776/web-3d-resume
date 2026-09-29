@@ -8,6 +8,8 @@ const TARGETS = "a, button, [data-cursor]"
 const TEXT = "input, textarea, select, [contenteditable]"
 const PAD = 8
 const FREE = 26
+// How much the reticle inflates while the mouse button is held.
+const PRESS = 12
 
 const CursorFX = () => {
   const root = useRef(null)
@@ -19,8 +21,11 @@ const CursorFX = () => {
     const el = root.current
     let x = innerWidth / 2, y = innerHeight / 2
     let gx = x, gy = y
-    let fx = x - FREE / 2, fy = y - FREE / 2, fw = FREE, fh = FREE
+    // Reticle is tracked by its center + size, so it always grows/shrinks
+    // symmetrically around the center, like a balloon.
+    let cx = x, cy = y, fw = FREE, fh = FREE
     let target = null
+    let pressed = false
     let raf
 
     const pick = (node) => {
@@ -42,8 +47,14 @@ const CursorFX = () => {
     }
     const onLeave = () => el.classList.remove("is-visible")
     const onScroll = () => pick(document.elementFromPoint(x, y))
-    const onDown = () => el.classList.add("is-pressed")
-    const onUp = () => el.classList.remove("is-pressed")
+    const onDown = () => {
+      pressed = true
+      el.classList.add("is-pressed")
+    }
+    const onUp = () => {
+      pressed = false
+      el.classList.remove("is-pressed")
+    }
     // Native link/image dragging stops mousemove, freezing the reticle mid-way.
     const onDragStart = (e) => e.preventDefault()
 
@@ -53,19 +64,25 @@ const CursorFX = () => {
       gx += (x - gx) * 0.12
       gy += (y - gy) * 0.12
 
-      let tx = x - FREE / 2, ty = y - FREE / 2, tw = FREE, th = FREE
+      let tcx = x, tcy = y, tw = FREE, th = FREE
       if (target && target.isConnected) {
         const r = target.getBoundingClientRect()
-        tx = r.left - PAD
-        ty = r.top - PAD
+        tcx = r.left + r.width / 2
+        tcy = r.top + r.height / 2
         tw = r.width + PAD * 2
         th = r.height + PAD * 2
       }
+      if (pressed) {
+        tw += PRESS
+        th += PRESS
+      }
       const k = target ? 0.2 : 0.35
-      fx += (tx - fx) * k
-      fy += (ty - fy) * k
+      cx += (tcx - cx) * k
+      cy += (tcy - cy) * k
       fw += (tw - fw) * k
       fh += (th - fh) * k
+      const fx = cx - fw / 2
+      const fy = cy - fh / 2
 
       el.classList.toggle("is-locked", !!target)
       el.style.setProperty("--x", `${x}px`)
