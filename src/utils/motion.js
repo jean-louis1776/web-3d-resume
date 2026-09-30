@@ -4,6 +4,9 @@ export const isTouch =
   !matchMedia("(hover: hover) and (pointer: fine)").matches ||
   matchMedia("(any-pointer: coarse)").matches
 
+// OS "reduce motion" setting: 3D stops spinning, CSS animations are cut in index.css.
+export const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches
+
 export const textVariant = (delay) => {
   return {
     hidden: {

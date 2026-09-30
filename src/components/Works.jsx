@@ -49,7 +49,7 @@ const ProjectCard = ({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${name} source code on GitHub`}
-            className="absolute top-3 right-3 black-gradient w-10 h-10 rounded-full flex justify-center items-center select-none">
+            className="absolute top-3 right-3 bg-tertiary border border-[#915eff]/40 w-10 h-10 rounded-full flex justify-center items-center select-none">
             <img
               src={github}
               alt=""
@@ -69,8 +69,8 @@ const ProjectCard = ({
       </a>
 
       <div className="mt-auto pt-4 flex flex-wrap gap-2 select-none">
-        {tags.map((tag) => (
-          <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
+        {tags.map((tag, i) => (
+          <p key={`${name}-${tag.name}`} className={`text-[14px] ${i % 2 ? "violet" : "teal"}-text-gradient`}>
             #{tag.name}
           </p>
         ))}

@@ -216,23 +216,18 @@ const projects = [
     tags: [
       {
         name: "react19",
-        color: "blue-text-gradient",
       },
       {
         name: "typescript",
-        color: "green-text-gradient",
       },
       {
         name: "websocket",
-        color: "orange-text-gradient",
       },
       {
         name: "zustand",
-        color: "pink-text-gradient",
       },
       {
         name: "go_backend",
-        color: 'blue-text-gradient'
       }
     ],
     image: project1,
@@ -245,19 +240,15 @@ const projects = [
     tags: [
       {
         name: "nuxt3",
-        color: "green-text-gradient",
       },
       {
         name: "typescript",
-        color: "blue-text-gradient",
       },
       {
         name: "pug",
-        color: "orange-text-gradient",
       },
       {
         name: "telegram",
-        color: "pink-text-gradient",
       },
     ],
     image: project2,
@@ -270,11 +261,9 @@ const projects = [
     tags: [
       {
         name: "react",
-        color: "blue-text-gradient",
       },
       {
         name: "scss",
-        color: "pink-text-gradient",
       },
     ],
     image: project3,
@@ -288,15 +277,12 @@ const projects = [
     tags: [
       {
         name: "react",
-        color: "blue-text-gradient",
       },
       {
         name: "rest_api",
-        color: "green-text-gradient",
       },
       {
         name: "css",
-        color: "pink-text-gradient",
       },
     ],
     image: project4,

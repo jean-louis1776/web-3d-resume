@@ -32,26 +32,12 @@
   display: block;
 }
 
-.black-gradient {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
 .violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: #915eff;
+  background: linear-gradient(-90deg, #915eff 0%, rgba(60, 51, 80, 0) 100%);
   background: -webkit-linear-gradient(
     -90deg,
-    #804dee 0%,
+    #915eff 0%,
     rgba(60, 51, 80, 0) 100%
   );
 }
@@ -62,18 +48,15 @@
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 
-.orange-text-gradient {
-  background: #f12711; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #f12711,
-    #f5af19
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #f12711,
-    #f5af19
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* the two accents for tags and small text: teal and violet */
+.teal-text-gradient {
+  background: linear-gradient(to top, #00cea8, #5ef2d6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.violet-text-gradient {
+  background: linear-gradient(to top, #915eff, #bf61ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -347,6 +330,68 @@ html.cursor-fx-on .glitch:hover::after { animation: glitch-b 0.42s steps(1, end)
   60%  { clip-path: inset(8% 0 80% 0); transform: translateX(-7px); }
   80%  { clip-path: inset(72% 0 18% 0); transform: translateX(3px); }
   100% { opacity: 0; }
+}
+
+/* soft violet halo under cards and bordered blocks on hover (shadow-card kept as the first layer).
+   .glow = same halo without the cursor spotlight/reticle that [data-cursor] brings. */
+@media (hover: hover) {
+  [data-cursor] {
+    transition-property: transform, box-shadow;
+  }
+  .glow,
+  .vertical-timeline-element-content {
+    transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+  }
+  [data-cursor]:hover,
+  .glow:hover,
+  /* the date is rendered inside the card and positioned outside it: hovering it must not light the card */
+  .vertical-timeline-element-content:hover:not(:has(.vertical-timeline-element-date:hover)) {
+    box-shadow: 0px 35px 120px -15px #211e35, 0 0 40px -12px rgba(145, 94, 255, 0.45);
+  }
+}
+
+/* faint dot grid behind the middle sections (not hero/contact), fading out at the top and bottom */
+.bg-texture {
+  position: relative;
+}
+.bg-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(170, 166, 195, 0.07) 1px, transparent 1.5px) 0 0 / 28px 28px;
+  -webkit-mask-image: linear-gradient(transparent, #000 300px, #000 calc(100% - 300px), transparent);
+  mask-image: linear-gradient(transparent, #000 300px, #000 calc(100% - 300px), transparent);
+}
+
+/* vignette + film grain over the whole page, under the cursor (z 50) */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+}
+body::before {
+  background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.35) 100%);
+}
+body::after {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+}
+
+/* people who turned motion off in the OS: kill CSS animations too (framer is handled in App) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .scramble-noise {

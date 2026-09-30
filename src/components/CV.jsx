@@ -47,7 +47,7 @@ const DownloadIcon = (props) => (
 const CvButton = ({href, fileName, Flag, title, subtitle}) => (
   <a href={href} download={fileName} className="w-full">
     <button
-      className="group w-full flex items-center gap-3 xs:gap-4 bg-tertiary py-3 px-4 xs:px-5 rounded-xl outline-none
+      className="glow group w-full flex items-center gap-3 xs:gap-4 bg-tertiary py-3 px-4 xs:px-5 rounded-xl outline-none
                  text-white shadow-md shadow-primary border border-transparent
                  hover:border-[#915eff] hover:-translate-y-0.5 transition-all duration-300">
       <Flag className="w-8 h-5 xs:w-9 xs:h-[22px] rounded-[3px] shadow-sm shrink-0"/>
@@ -64,7 +64,7 @@ const CvButton = ({href, fileName, Flag, title, subtitle}) => (
 )
 
 const Card = ({text, name}) => (
-  <div className="bg-black-200 p-5 xs:p-10 rounded-3xl xs:w-[320px] w-full select-none">
+  <div className="glow bg-black-200 p-5 xs:p-10 rounded-3xl xs:w-[320px] w-full select-none">
     <p className="text-white font-black text-[48px]">"</p>
 
     <div className="mt-1">
@@ -73,7 +73,7 @@ const Card = ({text, name}) => (
       <div className="mt-7 flex justify-between items-center gap-1">
         <div className="flex-1 flex flex-col">
           <p className="text-white font-medium text-[16px]">
-            <span className="blue-text-gradient">@</span> {name}
+            <span className="teal-text-gradient">@</span> {name}
           </p>
         </div>
       </div>
@@ -99,7 +99,7 @@ const CV = () => {
           <Card key={word.name} {...word}/>
         ))}
 
-        <div className="bg-black-200 p-5 xs:p-10 rounded-3xl xs:w-[640px] w-full">
+        <div className="glow bg-black-200 p-5 xs:p-10 rounded-3xl xs:w-[640px] w-full">
           <div className="flex min-[850px]:flex-row flex-col justify-around items-center gap-8 xs:gap-10">
             <img src={CVDuncan} alt="CVDuncan" className="w-[200px] xs:w-[250px] select-none"/>
 

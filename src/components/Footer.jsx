@@ -23,7 +23,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
               aria-label={contact.subtitle}
-              className="w-11 h-11 rounded-full bg-tertiary flex items-center justify-center border border-transparent hover:border-[#915eff] hover:-translate-y-1 transition-all duration-300">
+              className="glow w-11 h-11 rounded-full bg-tertiary flex items-center justify-center border border-transparent hover:border-[#915eff] hover:-translate-y-1 transition-all duration-300">
               <img src={contact.icon} alt={contact.subtitle} className="w-5 h-5 object-contain"/>
             </a>
           ))}
